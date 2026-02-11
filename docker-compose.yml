@@ -1,0 +1,49 @@
+services:
+  maven:
+    image: maven:3.9.0-eclipse-temurin-17
+    working_dir: /data
+    command: sh -c "mvn clean install"
+    volumes:
+      - ./:/data
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${KC_DB_USERNAME}
+      - POSTGRES_PASSWORD=${KC_DB_PASSWORD}
+      - PGDATA=/var/lib/postgresql/data
+    volumes:
+      - ./tmp/postgres/initdb:/docker-entrypoint-initdb.d
+      - ./tmp/postgres/pgdata:/var/lib/postgresql/data
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.5.3
+    environment:
+      - KC_DB=${KC_DB}
+      - KC_DB_URL=${KC_DB_URL}
+      - KC_DB_USERNAME=${KC_DB_USERNAME}
+      - KC_DB_PASSWORD=${KC_DB_PASSWORD}
+      - KC_HOSTNAME=${KC_HOSTNAME}
+      - KC_HEALTH_ENABLED=${KC_HEALTH_ENABLED}
+      - KC_METRICS_ENABLED=${KC_METRICS_ENABLED}
+      - KC_BOOTSTRAP_ADMIN_USERNAME=${KC_BOOTSTRAP_ADMIN_USERNAME}
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=${KC_BOOTSTRAP_ADMIN_PASSWORD}
+      - PROXY_ADDRESS_FORWARDING=${PROXY_ADDRESS_FORWARDING}
+      - KC_PROXY=${KC_PROXY}
+      - KEYCLOAK_PRODUCTION=${KEYCLOAK_PRODUCTION}
+      - KEYCLOAK_HOSTNAME=${KEYCLOAK_HOSTNAME}
+      - KC_HTTP_ENABLED=${KC_HTTP_ENABLED}
+    depends_on:
+      maven:
+        condition: service_completed_successfully
+      db:
+        condition: service_started
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./tmp/keycloak/data:/opt/keycloak/data
+      - ./tmp/keycloak/config:/opt/keycloak/data/import
+      - ./target/grpc-event-listener.jar:/opt/keycloak/providers/grpc-event-listener.jar
+    restart: always
+    entrypoint: [ "/opt/keycloak/bin/kc.sh", "start", "--import-realm" ]
