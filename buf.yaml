@@ -1,0 +1,21 @@
+version: v2
+modules:
+  - path: src/proto_include
+    lint:
+      disallow_comment_ignores: true
+  - path: src/proto
+    lint:
+      use:
+        - STANDARD
+      except:
+        - FIELD_NOT_REQUIRED
+        - PACKAGE_NO_IMPORT_CYCLE
+      enum_zero_value_suffix: _INVALID
+      service_suffix: API
+      disallow_comment_ignores: true
+    breaking:
+      use:
+        - FILE
+      except:
+        - EXTENSION_NO_DELETE
+        - FIELD_SAME_DEFAULT
