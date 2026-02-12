@@ -3,7 +3,7 @@
 // source: keycloak/event/v1/event.proto
 // Protobuf Java Version: 4.33.5
 
-package ru.event.listener.extension.keycloak.event.v1;
+package com.keycloak.event.v1;
 
 /**
  * <pre>
@@ -2148,7 +2148,7 @@ public enum EventType
   }
   public static com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return ru.event.listener.extension.keycloak.event.v1.EventProto.getDescriptor().getEnumTypes().get(1);
+    return com.keycloak.event.v1.EventProto.getDescriptor().getEnumTypes().get(1);
   }
 
   private static final EventType[] VALUES = values();

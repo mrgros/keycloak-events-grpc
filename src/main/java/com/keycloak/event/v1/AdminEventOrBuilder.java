@@ -3,7 +3,7 @@
 // source: keycloak/event/v1/event.proto
 // Protobuf Java Version: 4.33.5
 
-package ru.event.listener.extension.keycloak.event.v1;
+package com.keycloak.event.v1;
 
 @com.google.protobuf.Generated
 public interface AdminEventOrBuilder extends
@@ -114,7 +114,7 @@ public interface AdminEventOrBuilder extends
    * <code>.keycloak.event.v1.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
    * @return The authDetails.
    */
-  ru.event.listener.extension.keycloak.event.v1.AuthDetails getAuthDetails();
+  com.keycloak.event.v1.AuthDetails getAuthDetails();
   /**
    * <pre>
    * Authentication details
@@ -122,7 +122,7 @@ public interface AdminEventOrBuilder extends
    *
    * <code>.keycloak.event.v1.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
    */
-  ru.event.listener.extension.keycloak.event.v1.AuthDetailsOrBuilder getAuthDetailsOrBuilder();
+  com.keycloak.event.v1.AuthDetailsOrBuilder getAuthDetailsOrBuilder();
 
   /**
    * <pre>
@@ -161,7 +161,7 @@ public interface AdminEventOrBuilder extends
    * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
    * @return The operationType.
    */
-  ru.event.listener.extension.keycloak.event.v1.OperationType getOperationType();
+  com.keycloak.event.v1.OperationType getOperationType();
 
   /**
    * <pre>

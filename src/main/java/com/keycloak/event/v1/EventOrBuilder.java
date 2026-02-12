@@ -3,7 +3,7 @@
 // source: keycloak/event/v1/event.proto
 // Protobuf Java Version: 4.33.5
 
-package ru.event.listener.extension.keycloak.event.v1;
+package com.keycloak.event.v1;
 
 @com.google.protobuf.Generated
 public interface EventOrBuilder extends
@@ -74,7 +74,7 @@ public interface EventOrBuilder extends
    * <code>.keycloak.event.v1.EventType type = 3 [json_name = "type"];</code>
    * @return The type.
    */
-  ru.event.listener.extension.keycloak.event.v1.EventType getType();
+  com.keycloak.event.v1.EventType getType();
 
   /**
    * <pre>

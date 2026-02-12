@@ -3,7 +3,7 @@
 // source: keycloak/event/v1/event_api.proto
 // Protobuf Java Version: 4.33.5
 
-package ru.event.listener.extension.keycloak.event.v1;
+package com.keycloak.event.v1;
 
 @com.google.protobuf.Generated
 public interface CreateAdminRequestOrBuilder extends
@@ -15,7 +15,7 @@ public interface CreateAdminRequestOrBuilder extends
    * Unique identifier for the admin event
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
+   * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   java.lang.String getId();
@@ -24,7 +24,7 @@ public interface CreateAdminRequestOrBuilder extends
    * Unique identifier for the admin event
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
+   * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
   com.google.protobuf.ByteString
@@ -35,7 +35,7 @@ public interface CreateAdminRequestOrBuilder extends
    * Timestamp when the admin event occurred
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
    * @return Whether the time field is set.
    */
   boolean hasTime();
@@ -44,7 +44,7 @@ public interface CreateAdminRequestOrBuilder extends
    * Timestamp when the admin event occurred
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
    * @return The time.
    */
   com.google.protobuf.Timestamp getTime();
@@ -53,7 +53,7 @@ public interface CreateAdminRequestOrBuilder extends
    * Timestamp when the admin event occurred
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getTimeOrBuilder();
 
@@ -62,7 +62,7 @@ public interface CreateAdminRequestOrBuilder extends
    * Unique identifier of the realm where the event occurred
    * </pre>
    *
-   * <code>string realm_id = 3 [json_name = "realmId", (.validate.rules) = { ... }</code>
+   * <code>string realm_id = 3 [json_name = "realmId"];</code>
    * @return The realmId.
    */
   java.lang.String getRealmId();
@@ -71,7 +71,7 @@ public interface CreateAdminRequestOrBuilder extends
    * Unique identifier of the realm where the event occurred
    * </pre>
    *
-   * <code>string realm_id = 3 [json_name = "realmId", (.validate.rules) = { ... }</code>
+   * <code>string realm_id = 3 [json_name = "realmId"];</code>
    * @return The bytes for realmId.
    */
   com.google.protobuf.ByteString
@@ -114,7 +114,7 @@ public interface CreateAdminRequestOrBuilder extends
    * <code>.keycloak.event.v1.CreateAdminRequest.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
    * @return The authDetails.
    */
-  ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails getAuthDetails();
+  com.keycloak.event.v1.CreateAdminRequest.AuthDetails getAuthDetails();
   /**
    * <pre>
    * Authentication details of the user or client who performed the operation
@@ -122,7 +122,7 @@ public interface CreateAdminRequestOrBuilder extends
    *
    * <code>.keycloak.event.v1.CreateAdminRequest.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
    */
-  ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetailsOrBuilder getAuthDetailsOrBuilder();
+  com.keycloak.event.v1.CreateAdminRequest.AuthDetailsOrBuilder getAuthDetailsOrBuilder();
 
   /**
    * <pre>
@@ -149,7 +149,7 @@ public interface CreateAdminRequestOrBuilder extends
    * Type of operation performed (create, update, delete, action)
    * </pre>
    *
-   * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType", (.validate.rules) = { ... }</code>
+   * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
    * @return The enum numeric value on the wire for operationType.
    */
   int getOperationTypeValue();
@@ -158,10 +158,10 @@ public interface CreateAdminRequestOrBuilder extends
    * Type of operation performed (create, update, delete, action)
    * </pre>
    *
-   * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType", (.validate.rules) = { ... }</code>
+   * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
    * @return The operationType.
    */
-  ru.event.listener.extension.keycloak.event.v1.OperationType getOperationType();
+  com.keycloak.event.v1.OperationType getOperationType();
 
   /**
    * <pre>
@@ -228,7 +228,7 @@ public interface CreateAdminRequestOrBuilder extends
    * Additional details about the event in key-value pairs
    * </pre>
    *
-   * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+   * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
    */
   int getDetailsCount();
   /**
@@ -236,7 +236,7 @@ public interface CreateAdminRequestOrBuilder extends
    * Additional details about the event in key-value pairs
    * </pre>
    *
-   * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+   * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
    */
   boolean containsDetails(
       java.lang.String key);
@@ -251,7 +251,7 @@ public interface CreateAdminRequestOrBuilder extends
    * Additional details about the event in key-value pairs
    * </pre>
    *
-   * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+   * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
    */
   java.util.Map<java.lang.String, java.lang.String>
   getDetailsMap();
@@ -260,7 +260,7 @@ public interface CreateAdminRequestOrBuilder extends
    * Additional details about the event in key-value pairs
    * </pre>
    *
-   * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+   * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
    */
   /* nullable */
 java.lang.String getDetailsOrDefault(
@@ -272,7 +272,7 @@ java.lang.String defaultValue);
    * Additional details about the event in key-value pairs
    * </pre>
    *
-   * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+   * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
    */
   java.lang.String getDetailsOrThrow(
       java.lang.String key);

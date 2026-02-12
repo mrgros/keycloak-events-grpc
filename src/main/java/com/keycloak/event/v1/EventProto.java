@@ -3,7 +3,7 @@
 // source: keycloak/event/v1/event.proto
 // Protobuf Java Version: 4.33.5
 
-package ru.event.listener.extension.keycloak.event.v1;
+package com.keycloak.event.v1;
 
 @com.google.protobuf.Generated
 public final class EventProto extends com.google.protobuf.GeneratedFile {
@@ -211,12 +211,10 @@ public final class EventProto extends com.google.protobuf.GeneratedFile {
       "\n\025EVENT_TYPE_INVITE_ORG\020u\022\037\n\033EVENT_TYPE_" +
       "INVITE_ORG_ERROR\020v\022#\n\037EVENT_TYPE_USER_SE" +
       "SSION_DELETED\020w\022)\n%EVENT_TYPE_USER_SESSI" +
-      "ON_DELETED_ERROR\020xB\274\001\n-ru.event.listener" +
-      ".extension.keycloak.event.v1B\nEventProto" +
-      "P\001Z\031keycloak/event/v1;eventv1\242\002\003KEX\252\002\021Ke" +
-      "ycloak.Event.V1\312\002\021Keycloak\\Event\\V1\342\002\035Ke" +
-      "ycloak\\Event\\V1\\GPBMetadata\352\002\023Keycloak::" +
-      "Event::V1b\006proto3"
+      "ON_DELETED_ERROR\020xBn\n\025com.keycloak.event" +
+      ".v1B\nEventProtoP\001Z\031keycloak/event/v1;eve" +
+      "ntv1\242\002\003CKE\252\002\021Keycloak.Event.V1\312\002\021Keycloa" +
+      "k\\Event\\V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -3,7 +3,7 @@
 // source: keycloak/event/v1/event_api.proto
 // Protobuf Java Version: 4.33.5
 
-package ru.event.listener.extension.keycloak.event.v1;
+package com.keycloak.event.v1;
 
 @com.google.protobuf.Generated
 public final class EventApiProto extends com.google.protobuf.GeneratedFile {
@@ -72,60 +72,52 @@ public final class EventApiProto extends com.google.protobuf.GeneratedFile {
     java.lang.String[] descriptorData = {
       "\n!keycloak/event/v1/event_api.proto\022\021key" +
       "cloak.event.v1\032\035keycloak/event/v1/event." +
-      "proto\032\037google/protobuf/timestamp.proto\032\027" +
-      "validate/validate.proto\"\267\006\n\022CreateAdminR" +
-      "equest\022\030\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001R\002id\0228\n\004time" +
-      "\030\002 \001(\0132\032.google.protobuf.TimestampB\010\372B\005\262" +
-      "\001\002\010\001R\004time\022#\n\010realm_id\030\003 \001(\tB\010\372B\005r\003\260\001\001R\007" +
-      "realmId\022\035\n\nrealm_name\030\004 \001(\tR\trealmName\022T" +
-      "\n\014auth_details\030\005 \001(\01321.keycloak.event.v1" +
-      ".CreateAdminRequest.AuthDetailsR\013authDet" +
-      "ails\022#\n\rresource_type\030\006 \001(\tR\014resourceTyp" +
-      "e\022Q\n\016operation_type\030\007 \001(\0162 .keycloak.eve" +
-      "nt.v1.OperationTypeB\010\372B\005\202\001\002\020\001R\roperation" +
-      "Type\022#\n\rresource_path\030\010 \001(\tR\014resourcePat" +
-      "h\022&\n\016representation\030\t \001(\tR\016representatio" +
-      "n\022\024\n\005error\030\n \001(\tR\005error\022V\n\007details\030\013 \003(\013" +
-      "22.keycloak.event.v1.CreateAdminRequest." +
-      "DetailsEntryB\010\372B\005\232\001\0020\001R\007details\032:\n\014Detai" +
-      "lsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\t" +
-      "R\005value:\0028\001\032\303\001\n\013AuthDetails\022#\n\010realm_id\030" +
-      "\001 \001(\tB\010\372B\005r\003\260\001\001R\007realmId\022\035\n\nrealm_name\030\002" +
-      " \001(\tR\trealmName\022%\n\tclient_id\030\003 \001(\tB\010\372B\005r" +
-      "\003\260\001\001R\010clientId\022!\n\007user_id\030\004 \001(\tB\010\372B\005r\003\260\001" +
-      "\001R\006userId\022&\n\nip_address\030\005 \001(\tB\007\372B\004r\002p\001R\t" +
-      "ipAddress\"\025\n\023CreateAdminResponse\"\243\004\n\rCre" +
-      "ateRequest\022\030\n\002id\030\001 \001(\tB\010\372B\005r\003\260\001\001R\002id\0228\n\004" +
-      "time\030\002 \001(\0132\032.google.protobuf.TimestampB\010" +
-      "\372B\005\262\001\002\010\001R\004time\022:\n\004type\030\003 \001(\0162\034.keycloak." +
-      "event.v1.EventTypeB\010\372B\005\202\001\002\020\001R\004type\022#\n\010re" +
-      "alm_id\030\004 \001(\tB\010\372B\005r\003\260\001\001R\007realmId\022\035\n\nrealm" +
-      "_name\030\005 \001(\tR\trealmName\022%\n\tclient_id\030\006 \001(" +
-      "\tB\010\372B\005r\003\260\001\001R\010clientId\022!\n\007user_id\030\007 \001(\tB\010" +
-      "\372B\005r\003\260\001\001R\006userId\022\'\n\nsession_id\030\010 \001(\tB\010\372B" +
-      "\005r\003\260\001\001R\tsessionId\022&\n\nip_address\030\t \001(\tB\007\372" +
-      "B\004r\002p\001R\tipAddress\022\024\n\005error\030\n \001(\tR\005error\022" +
-      "Q\n\007details\030\013 \003(\0132-.keycloak.event.v1.Cre" +
-      "ateRequest.DetailsEntryB\010\372B\005\232\001\0020\001R\007detai" +
-      "ls\032:\n\014DetailsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005" +
-      "value\030\002 \001(\tR\005value:\0028\001\"\020\n\016CreateResponse" +
-      "2\273\001\n\010EventAPI\022^\n\013CreateAdmin\022%.keycloak." +
-      "event.v1.CreateAdminRequest\032&.keycloak.e" +
-      "vent.v1.CreateAdminResponse\"\000\022O\n\006Create\022" +
-      " .keycloak.event.v1.CreateRequest\032!.keyc" +
-      "loak.event.v1.CreateResponse\"\000B\277\001\n-ru.ev" +
-      "ent.listener.extension.keycloak.event.v1" +
-      "B\rEventApiProtoP\001Z\031keycloak/event/v1;eve" +
-      "ntv1\242\002\003KEX\252\002\021Keycloak.Event.V1\312\002\021Keycloa" +
-      "k\\Event\\V1\342\002\035Keycloak\\Event\\V1\\GPBMetada" +
-      "ta\352\002\023Keycloak::Event::V1b\006proto3"
+      "proto\032\037google/protobuf/timestamp.proto\"\336" +
+      "\005\n\022CreateAdminRequest\022\016\n\002id\030\001 \001(\tR\002id\022.\n" +
+      "\004time\030\002 \001(\0132\032.google.protobuf.TimestampR" +
+      "\004time\022\031\n\010realm_id\030\003 \001(\tR\007realmId\022\035\n\nreal" +
+      "m_name\030\004 \001(\tR\trealmName\022T\n\014auth_details\030" +
+      "\005 \001(\01321.keycloak.event.v1.CreateAdminReq" +
+      "uest.AuthDetailsR\013authDetails\022#\n\rresourc" +
+      "e_type\030\006 \001(\tR\014resourceType\022G\n\016operation_" +
+      "type\030\007 \001(\0162 .keycloak.event.v1.Operation" +
+      "TypeR\roperationType\022#\n\rresource_path\030\010 \001" +
+      "(\tR\014resourcePath\022&\n\016representation\030\t \001(\t" +
+      "R\016representation\022\024\n\005error\030\n \001(\tR\005error\022L" +
+      "\n\007details\030\013 \003(\01322.keycloak.event.v1.Crea" +
+      "teAdminRequest.DetailsEntryR\007details\032:\n\014" +
+      "DetailsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030" +
+      "\002 \001(\tR\005value:\0028\001\032\234\001\n\013AuthDetails\022\031\n\010real" +
+      "m_id\030\001 \001(\tR\007realmId\022\035\n\nrealm_name\030\002 \001(\tR" +
+      "\trealmName\022\033\n\tclient_id\030\003 \001(\tR\010clientId\022" +
+      "\027\n\007user_id\030\004 \001(\tR\006userId\022\035\n\nip_address\030\005" +
+      " \001(\tR\tipAddress\"\025\n\023CreateAdminResponse\"\312" +
+      "\003\n\rCreateRequest\022\016\n\002id\030\001 \001(\tR\002id\022.\n\004time" +
+      "\030\002 \001(\0132\032.google.protobuf.TimestampR\004time" +
+      "\0220\n\004type\030\003 \001(\0162\034.keycloak.event.v1.Event" +
+      "TypeR\004type\022\031\n\010realm_id\030\004 \001(\tR\007realmId\022\035\n" +
+      "\nrealm_name\030\005 \001(\tR\trealmName\022\033\n\tclient_i" +
+      "d\030\006 \001(\tR\010clientId\022\027\n\007user_id\030\007 \001(\tR\006user" +
+      "Id\022\035\n\nsession_id\030\010 \001(\tR\tsessionId\022\035\n\nip_" +
+      "address\030\t \001(\tR\tipAddress\022\024\n\005error\030\n \001(\tR" +
+      "\005error\022G\n\007details\030\013 \003(\0132-.keycloak.event" +
+      ".v1.CreateRequest.DetailsEntryR\007details\032" +
+      ":\n\014DetailsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005val" +
+      "ue\030\002 \001(\tR\005value:\0028\001\"\020\n\016CreateResponse2\273\001" +
+      "\n\010EventAPI\022^\n\013CreateAdmin\022%.keycloak.eve" +
+      "nt.v1.CreateAdminRequest\032&.keycloak.even" +
+      "t.v1.CreateAdminResponse\"\000\022O\n\006Create\022 .k" +
+      "eycloak.event.v1.CreateRequest\032!.keycloa" +
+      "k.event.v1.CreateResponse\"\000Bq\n\025com.keycl" +
+      "oak.event.v1B\rEventApiProtoP\001Z\031keycloak/" +
+      "event/v1;eventv1\242\002\003CKE\252\002\021Keycloak.Event." +
+      "V1\312\002\021Keycloak\\Event\\V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          ru.event.listener.extension.keycloak.event.v1.EventProto.getDescriptor(),
+          com.keycloak.event.v1.EventProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-          ru.event.listener.extension.validate.ValidateProto.getDescriptor(),
         });
     internal_static_keycloak_event_v1_CreateAdminRequest_descriptor =
       getDescriptor().getMessageType(0);
@@ -170,14 +162,8 @@ public final class EventApiProto extends com.google.protobuf.GeneratedFile {
         internal_static_keycloak_event_v1_CreateResponse_descriptor,
         new java.lang.String[] { });
     descriptor.resolveAllFeaturesImmutable();
-    ru.event.listener.extension.keycloak.event.v1.EventProto.getDescriptor();
+    com.keycloak.event.v1.EventProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
-    ru.event.listener.extension.validate.ValidateProto.getDescriptor();
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(ru.event.listener.extension.validate.ValidateProto.rules);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

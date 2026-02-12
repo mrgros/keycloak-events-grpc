@@ -3,10 +3,10 @@
 // source: keycloak/event/v1/event_api.proto
 // Protobuf Java Version: 4.33.5
 
-package ru.event.listener.extension.keycloak.event.v1;
+package com.keycloak.event.v1;
 
 @com.google.protobuf.Generated
-public interface CreateResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:keycloak.event.v1.CreateResponse)
+public interface CreateAdminResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:keycloak.event.v1.CreateAdminResponse)
     com.google.protobuf.MessageOrBuilder {
 }

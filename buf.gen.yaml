@@ -1,11 +1,8 @@
 version: v2
 managed:
-  enabled: true
-  override:
-    - file_option: java_package_prefix
-      value: ru.event.listener.extension
+  enabled: false
 plugins:
-  - remote: buf.build/grpc/java:v1.79.0
+  - remote: buf.build/grpc/java:v1.66.0
     out: src/main/java
   - remote: buf.build/protocolbuffers/java:v33.5
     out: src/main/java

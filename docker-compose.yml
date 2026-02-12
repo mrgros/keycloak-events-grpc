@@ -5,6 +5,7 @@ services:
     command: sh -c "mvn clean install"
     volumes:
       - ./:/data
+      - ./tmp/m2:/root/.m2/
 
   db:
     image: postgres:15-alpine
@@ -34,6 +35,9 @@ services:
       - KEYCLOAK_PRODUCTION=${KEYCLOAK_PRODUCTION}
       - KEYCLOAK_HOSTNAME=${KEYCLOAK_HOSTNAME}
       - KC_HTTP_ENABLED=${KC_HTTP_ENABLED}
+      - KC_HOSTNAME_STRICT_HTTPS=${KC_HOSTNAME_STRICT_HTTPS}
+      - GRPC_HOST=${GRPC_HOST}
+      - GRPC_PORT=${GRPC_PORT}
     depends_on:
       maven:
         condition: service_completed_successfully

@@ -3,7 +3,7 @@
 // source: keycloak/event/v1/event_api.proto
 // Protobuf Java Version: 4.33.5
 
-package ru.event.listener.extension.keycloak.event.v1;
+package com.keycloak.event.v1;
 
 /**
  * <pre>
@@ -37,15 +37,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateResponse_descriptor;
+    return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateResponse_fieldAccessorTable
+    return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ru.event.listener.extension.keycloak.event.v1.CreateResponse.class, ru.event.listener.extension.keycloak.event.v1.CreateResponse.Builder.class);
+            com.keycloak.event.v1.CreateResponse.class, com.keycloak.event.v1.CreateResponse.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -81,10 +81,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ru.event.listener.extension.keycloak.event.v1.CreateResponse)) {
+    if (!(obj instanceof com.keycloak.event.v1.CreateResponse)) {
       return super.equals(obj);
     }
-    ru.event.listener.extension.keycloak.event.v1.CreateResponse other = (ru.event.listener.extension.keycloak.event.v1.CreateResponse) obj;
+    com.keycloak.event.v1.CreateResponse other = (com.keycloak.event.v1.CreateResponse) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -102,44 +102,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.CreateResponse parseFrom(
+  public static com.keycloak.event.v1.CreateResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateResponse parseFrom(
+  public static com.keycloak.event.v1.CreateResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateResponse parseFrom(
+  public static com.keycloak.event.v1.CreateResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateResponse parseFrom(
+  public static com.keycloak.event.v1.CreateResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateResponse parseFrom(byte[] data)
+  public static com.keycloak.event.v1.CreateResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateResponse parseFrom(
+  public static com.keycloak.event.v1.CreateResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateResponse parseFrom(java.io.InputStream input)
+  public static com.keycloak.event.v1.CreateResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateResponse parseFrom(
+  public static com.keycloak.event.v1.CreateResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -147,26 +147,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.CreateResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.keycloak.event.v1.CreateResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.CreateResponse parseDelimitedFrom(
+  public static com.keycloak.event.v1.CreateResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateResponse parseFrom(
+  public static com.keycloak.event.v1.CreateResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateResponse parseFrom(
+  public static com.keycloak.event.v1.CreateResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -179,7 +179,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ru.event.listener.extension.keycloak.event.v1.CreateResponse prototype) {
+  public static Builder newBuilder(com.keycloak.event.v1.CreateResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -205,21 +205,21 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:keycloak.event.v1.CreateResponse)
-      ru.event.listener.extension.keycloak.event.v1.CreateResponseOrBuilder {
+      com.keycloak.event.v1.CreateResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateResponse_descriptor;
+      return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateResponse_fieldAccessorTable
+      return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ru.event.listener.extension.keycloak.event.v1.CreateResponse.class, ru.event.listener.extension.keycloak.event.v1.CreateResponse.Builder.class);
+              com.keycloak.event.v1.CreateResponse.class, com.keycloak.event.v1.CreateResponse.Builder.class);
     }
 
-    // Construct using ru.event.listener.extension.keycloak.event.v1.CreateResponse.newBuilder()
+    // Construct using com.keycloak.event.v1.CreateResponse.newBuilder()
     private Builder() {
 
     }
@@ -238,17 +238,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateResponse_descriptor;
+      return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateResponse_descriptor;
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.CreateResponse getDefaultInstanceForType() {
-      return ru.event.listener.extension.keycloak.event.v1.CreateResponse.getDefaultInstance();
+    public com.keycloak.event.v1.CreateResponse getDefaultInstanceForType() {
+      return com.keycloak.event.v1.CreateResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.CreateResponse build() {
-      ru.event.listener.extension.keycloak.event.v1.CreateResponse result = buildPartial();
+    public com.keycloak.event.v1.CreateResponse build() {
+      com.keycloak.event.v1.CreateResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -256,24 +256,24 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.CreateResponse buildPartial() {
-      ru.event.listener.extension.keycloak.event.v1.CreateResponse result = new ru.event.listener.extension.keycloak.event.v1.CreateResponse(this);
+    public com.keycloak.event.v1.CreateResponse buildPartial() {
+      com.keycloak.event.v1.CreateResponse result = new com.keycloak.event.v1.CreateResponse(this);
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ru.event.listener.extension.keycloak.event.v1.CreateResponse) {
-        return mergeFrom((ru.event.listener.extension.keycloak.event.v1.CreateResponse)other);
+      if (other instanceof com.keycloak.event.v1.CreateResponse) {
+        return mergeFrom((com.keycloak.event.v1.CreateResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ru.event.listener.extension.keycloak.event.v1.CreateResponse other) {
-      if (other == ru.event.listener.extension.keycloak.event.v1.CreateResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.keycloak.event.v1.CreateResponse other) {
+      if (other == com.keycloak.event.v1.CreateResponse.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -320,12 +320,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:keycloak.event.v1.CreateResponse)
-  private static final ru.event.listener.extension.keycloak.event.v1.CreateResponse DEFAULT_INSTANCE;
+  private static final com.keycloak.event.v1.CreateResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ru.event.listener.extension.keycloak.event.v1.CreateResponse();
+    DEFAULT_INSTANCE = new com.keycloak.event.v1.CreateResponse();
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.CreateResponse getDefaultInstance() {
+  public static com.keycloak.event.v1.CreateResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -361,7 +361,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public ru.event.listener.extension.keycloak.event.v1.CreateResponse getDefaultInstanceForType() {
+  public com.keycloak.event.v1.CreateResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

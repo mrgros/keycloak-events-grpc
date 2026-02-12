@@ -3,7 +3,7 @@
 // source: keycloak/event/v1/event_api.proto
 // Protobuf Java Version: 4.33.5
 
-package ru.event.listener.extension.keycloak.event.v1;
+package com.keycloak.event.v1;
 
 @com.google.protobuf.Generated
 public interface CreateRequestOrBuilder extends
@@ -15,7 +15,7 @@ public interface CreateRequestOrBuilder extends
    * Unique identifier for the event
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
+   * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   java.lang.String getId();
@@ -24,7 +24,7 @@ public interface CreateRequestOrBuilder extends
    * Unique identifier for the event
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
+   * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
   com.google.protobuf.ByteString
@@ -35,7 +35,7 @@ public interface CreateRequestOrBuilder extends
    * Timestamp when the event occurred
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
    * @return Whether the time field is set.
    */
   boolean hasTime();
@@ -44,7 +44,7 @@ public interface CreateRequestOrBuilder extends
    * Timestamp when the event occurred
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
    * @return The time.
    */
   com.google.protobuf.Timestamp getTime();
@@ -53,7 +53,7 @@ public interface CreateRequestOrBuilder extends
    * Timestamp when the event occurred
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getTimeOrBuilder();
 
@@ -62,7 +62,7 @@ public interface CreateRequestOrBuilder extends
    * Type of event that occurred (login, logout, token exchange, etc.)
    * </pre>
    *
-   * <code>.keycloak.event.v1.EventType type = 3 [json_name = "type", (.validate.rules) = { ... }</code>
+   * <code>.keycloak.event.v1.EventType type = 3 [json_name = "type"];</code>
    * @return The enum numeric value on the wire for type.
    */
   int getTypeValue();
@@ -71,17 +71,17 @@ public interface CreateRequestOrBuilder extends
    * Type of event that occurred (login, logout, token exchange, etc.)
    * </pre>
    *
-   * <code>.keycloak.event.v1.EventType type = 3 [json_name = "type", (.validate.rules) = { ... }</code>
+   * <code>.keycloak.event.v1.EventType type = 3 [json_name = "type"];</code>
    * @return The type.
    */
-  ru.event.listener.extension.keycloak.event.v1.EventType getType();
+  com.keycloak.event.v1.EventType getType();
 
   /**
    * <pre>
    * Unique identifier of the realm where the event occurred
    * </pre>
    *
-   * <code>string realm_id = 4 [json_name = "realmId", (.validate.rules) = { ... }</code>
+   * <code>string realm_id = 4 [json_name = "realmId"];</code>
    * @return The realmId.
    */
   java.lang.String getRealmId();
@@ -90,7 +90,7 @@ public interface CreateRequestOrBuilder extends
    * Unique identifier of the realm where the event occurred
    * </pre>
    *
-   * <code>string realm_id = 4 [json_name = "realmId", (.validate.rules) = { ... }</code>
+   * <code>string realm_id = 4 [json_name = "realmId"];</code>
    * @return The bytes for realmId.
    */
   com.google.protobuf.ByteString
@@ -121,7 +121,7 @@ public interface CreateRequestOrBuilder extends
    * Unique identifier of the client involved in the event
    * </pre>
    *
-   * <code>string client_id = 6 [json_name = "clientId", (.validate.rules) = { ... }</code>
+   * <code>string client_id = 6 [json_name = "clientId"];</code>
    * @return The clientId.
    */
   java.lang.String getClientId();
@@ -130,7 +130,7 @@ public interface CreateRequestOrBuilder extends
    * Unique identifier of the client involved in the event
    * </pre>
    *
-   * <code>string client_id = 6 [json_name = "clientId", (.validate.rules) = { ... }</code>
+   * <code>string client_id = 6 [json_name = "clientId"];</code>
    * @return The bytes for clientId.
    */
   com.google.protobuf.ByteString
@@ -141,7 +141,7 @@ public interface CreateRequestOrBuilder extends
    * Unique identifier of the user involved in the event
    * </pre>
    *
-   * <code>string user_id = 7 [json_name = "userId", (.validate.rules) = { ... }</code>
+   * <code>string user_id = 7 [json_name = "userId"];</code>
    * @return The userId.
    */
   java.lang.String getUserId();
@@ -150,7 +150,7 @@ public interface CreateRequestOrBuilder extends
    * Unique identifier of the user involved in the event
    * </pre>
    *
-   * <code>string user_id = 7 [json_name = "userId", (.validate.rules) = { ... }</code>
+   * <code>string user_id = 7 [json_name = "userId"];</code>
    * @return The bytes for userId.
    */
   com.google.protobuf.ByteString
@@ -161,7 +161,7 @@ public interface CreateRequestOrBuilder extends
    * Unique identifier of the user session
    * </pre>
    *
-   * <code>string session_id = 8 [json_name = "sessionId", (.validate.rules) = { ... }</code>
+   * <code>string session_id = 8 [json_name = "sessionId"];</code>
    * @return The sessionId.
    */
   java.lang.String getSessionId();
@@ -170,7 +170,7 @@ public interface CreateRequestOrBuilder extends
    * Unique identifier of the user session
    * </pre>
    *
-   * <code>string session_id = 8 [json_name = "sessionId", (.validate.rules) = { ... }</code>
+   * <code>string session_id = 8 [json_name = "sessionId"];</code>
    * @return The bytes for sessionId.
    */
   com.google.protobuf.ByteString
@@ -181,7 +181,7 @@ public interface CreateRequestOrBuilder extends
    * IP address of the client that initiated the event
    * </pre>
    *
-   * <code>string ip_address = 9 [json_name = "ipAddress", (.validate.rules) = { ... }</code>
+   * <code>string ip_address = 9 [json_name = "ipAddress"];</code>
    * @return The ipAddress.
    */
   java.lang.String getIpAddress();
@@ -190,7 +190,7 @@ public interface CreateRequestOrBuilder extends
    * IP address of the client that initiated the event
    * </pre>
    *
-   * <code>string ip_address = 9 [json_name = "ipAddress", (.validate.rules) = { ... }</code>
+   * <code>string ip_address = 9 [json_name = "ipAddress"];</code>
    * @return The bytes for ipAddress.
    */
   com.google.protobuf.ByteString
@@ -221,7 +221,7 @@ public interface CreateRequestOrBuilder extends
    * Additional details about the event in key-value pairs
    * </pre>
    *
-   * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+   * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
    */
   int getDetailsCount();
   /**
@@ -229,7 +229,7 @@ public interface CreateRequestOrBuilder extends
    * Additional details about the event in key-value pairs
    * </pre>
    *
-   * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+   * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
    */
   boolean containsDetails(
       java.lang.String key);
@@ -244,7 +244,7 @@ public interface CreateRequestOrBuilder extends
    * Additional details about the event in key-value pairs
    * </pre>
    *
-   * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+   * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
    */
   java.util.Map<java.lang.String, java.lang.String>
   getDetailsMap();
@@ -253,7 +253,7 @@ public interface CreateRequestOrBuilder extends
    * Additional details about the event in key-value pairs
    * </pre>
    *
-   * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+   * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
    */
   /* nullable */
 java.lang.String getDetailsOrDefault(
@@ -265,7 +265,7 @@ java.lang.String defaultValue);
    * Additional details about the event in key-value pairs
    * </pre>
    *
-   * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+   * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
    */
   java.lang.String getDetailsOrThrow(
       java.lang.String key);

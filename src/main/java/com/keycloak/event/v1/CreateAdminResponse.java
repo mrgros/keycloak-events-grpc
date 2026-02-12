@@ -3,7 +3,7 @@
 // source: keycloak/event/v1/event_api.proto
 // Protobuf Java Version: 4.33.5
 
-package ru.event.listener.extension.keycloak.event.v1;
+package com.keycloak.event.v1;
 
 /**
  * <pre>
@@ -37,15 +37,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminResponse_descriptor;
+    return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminResponse_fieldAccessorTable
+    return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse.class, ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse.Builder.class);
+            com.keycloak.event.v1.CreateAdminResponse.class, com.keycloak.event.v1.CreateAdminResponse.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -81,10 +81,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse)) {
+    if (!(obj instanceof com.keycloak.event.v1.CreateAdminResponse)) {
       return super.equals(obj);
     }
-    ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse other = (ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse) obj;
+    com.keycloak.event.v1.CreateAdminResponse other = (com.keycloak.event.v1.CreateAdminResponse) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -102,44 +102,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse parseFrom(
+  public static com.keycloak.event.v1.CreateAdminResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse parseFrom(
+  public static com.keycloak.event.v1.CreateAdminResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse parseFrom(
+  public static com.keycloak.event.v1.CreateAdminResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse parseFrom(
+  public static com.keycloak.event.v1.CreateAdminResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse parseFrom(byte[] data)
+  public static com.keycloak.event.v1.CreateAdminResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse parseFrom(
+  public static com.keycloak.event.v1.CreateAdminResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse parseFrom(java.io.InputStream input)
+  public static com.keycloak.event.v1.CreateAdminResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse parseFrom(
+  public static com.keycloak.event.v1.CreateAdminResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -147,26 +147,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.keycloak.event.v1.CreateAdminResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse parseDelimitedFrom(
+  public static com.keycloak.event.v1.CreateAdminResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse parseFrom(
+  public static com.keycloak.event.v1.CreateAdminResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse parseFrom(
+  public static com.keycloak.event.v1.CreateAdminResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -179,7 +179,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse prototype) {
+  public static Builder newBuilder(com.keycloak.event.v1.CreateAdminResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -205,21 +205,21 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:keycloak.event.v1.CreateAdminResponse)
-      ru.event.listener.extension.keycloak.event.v1.CreateAdminResponseOrBuilder {
+      com.keycloak.event.v1.CreateAdminResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminResponse_descriptor;
+      return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminResponse_fieldAccessorTable
+      return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse.class, ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse.Builder.class);
+              com.keycloak.event.v1.CreateAdminResponse.class, com.keycloak.event.v1.CreateAdminResponse.Builder.class);
     }
 
-    // Construct using ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse.newBuilder()
+    // Construct using com.keycloak.event.v1.CreateAdminResponse.newBuilder()
     private Builder() {
 
     }
@@ -238,17 +238,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminResponse_descriptor;
+      return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminResponse_descriptor;
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse getDefaultInstanceForType() {
-      return ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse.getDefaultInstance();
+    public com.keycloak.event.v1.CreateAdminResponse getDefaultInstanceForType() {
+      return com.keycloak.event.v1.CreateAdminResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse build() {
-      ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse result = buildPartial();
+    public com.keycloak.event.v1.CreateAdminResponse build() {
+      com.keycloak.event.v1.CreateAdminResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -256,24 +256,24 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse buildPartial() {
-      ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse result = new ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse(this);
+    public com.keycloak.event.v1.CreateAdminResponse buildPartial() {
+      com.keycloak.event.v1.CreateAdminResponse result = new com.keycloak.event.v1.CreateAdminResponse(this);
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse) {
-        return mergeFrom((ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse)other);
+      if (other instanceof com.keycloak.event.v1.CreateAdminResponse) {
+        return mergeFrom((com.keycloak.event.v1.CreateAdminResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse other) {
-      if (other == ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.keycloak.event.v1.CreateAdminResponse other) {
+      if (other == com.keycloak.event.v1.CreateAdminResponse.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -320,12 +320,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:keycloak.event.v1.CreateAdminResponse)
-  private static final ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse DEFAULT_INSTANCE;
+  private static final com.keycloak.event.v1.CreateAdminResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse();
+    DEFAULT_INSTANCE = new com.keycloak.event.v1.CreateAdminResponse();
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse getDefaultInstance() {
+  public static com.keycloak.event.v1.CreateAdminResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -361,7 +361,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public ru.event.listener.extension.keycloak.event.v1.CreateAdminResponse getDefaultInstanceForType() {
+  public com.keycloak.event.v1.CreateAdminResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

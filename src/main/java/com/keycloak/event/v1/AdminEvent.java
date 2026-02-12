@@ -3,20 +3,20 @@
 // source: keycloak/event/v1/event.proto
 // Protobuf Java Version: 4.33.5
 
-package ru.event.listener.extension.keycloak.event.v1;
+package com.keycloak.event.v1;
 
 /**
  * <pre>
- * Event message for Keycloak authentication and authorization events
+ * Admin event message for Keycloak administration operations
  * </pre>
  *
- * Protobuf type {@code keycloak.event.v1.Event}
+ * Protobuf type {@code keycloak.event.v1.AdminEvent}
  */
 @com.google.protobuf.Generated
-public final class Event extends
+public final class AdminEvent extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:keycloak.event.v1.Event)
-    EventOrBuilder {
+    // @@protoc_insertion_point(message_implements:keycloak.event.v1.AdminEvent)
+    AdminEventOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -25,27 +25,26 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 33,
       /* patch= */ 5,
       /* suffix= */ "",
-      "Event");
+      "AdminEvent");
   }
-  // Use Event.newBuilder() to construct.
-  private Event(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use AdminEvent.newBuilder() to construct.
+  private AdminEvent(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private Event() {
+  private AdminEvent() {
     id_ = "";
-    type_ = 0;
     realmId_ = "";
     realmName_ = "";
-    clientId_ = "";
-    userId_ = "";
-    sessionId_ = "";
-    ipAddress_ = "";
+    resourceType_ = "";
+    operationType_ = 0;
+    resourcePath_ = "";
+    representation_ = "";
     error_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ru.event.listener.extension.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_Event_descriptor;
+    return com.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AdminEvent_descriptor;
   }
 
   @SuppressWarnings({"rawtypes"})
@@ -63,9 +62,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ru.event.listener.extension.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_Event_fieldAccessorTable
+    return com.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AdminEvent_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ru.event.listener.extension.keycloak.event.v1.Event.class, ru.event.listener.extension.keycloak.event.v1.Event.Builder.class);
+            com.keycloak.event.v1.AdminEvent.class, com.keycloak.event.v1.AdminEvent.Builder.class);
   }
 
   private int bitField0_;
@@ -154,33 +153,7 @@ private static final long serialVersionUID = 0L;
     return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
   }
 
-  public static final int TYPE_FIELD_NUMBER = 3;
-  private int type_ = 0;
-  /**
-   * <pre>
-   * Event type
-   * </pre>
-   *
-   * <code>.keycloak.event.v1.EventType type = 3 [json_name = "type"];</code>
-   * @return The enum numeric value on the wire for type.
-   */
-  @java.lang.Override public int getTypeValue() {
-    return type_;
-  }
-  /**
-   * <pre>
-   * Event type
-   * </pre>
-   *
-   * <code>.keycloak.event.v1.EventType type = 3 [json_name = "type"];</code>
-   * @return The type.
-   */
-  @java.lang.Override public ru.event.listener.extension.keycloak.event.v1.EventType getType() {
-    ru.event.listener.extension.keycloak.event.v1.EventType result = ru.event.listener.extension.keycloak.event.v1.EventType.forNumber(type_);
-    return result == null ? ru.event.listener.extension.keycloak.event.v1.EventType.UNRECOGNIZED : result;
-  }
-
-  public static final int REALM_ID_FIELD_NUMBER = 4;
+  public static final int REALM_ID_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object realmId_ = "";
   /**
@@ -188,7 +161,7 @@ private static final long serialVersionUID = 0L;
    * Realm identifier
    * </pre>
    *
-   * <code>string realm_id = 4 [json_name = "realmId"];</code>
+   * <code>string realm_id = 3 [json_name = "realmId"];</code>
    * @return The realmId.
    */
   @java.lang.Override
@@ -209,7 +182,7 @@ private static final long serialVersionUID = 0L;
    * Realm identifier
    * </pre>
    *
-   * <code>string realm_id = 4 [json_name = "realmId"];</code>
+   * <code>string realm_id = 3 [json_name = "realmId"];</code>
    * @return The bytes for realmId.
    */
   @java.lang.Override
@@ -227,7 +200,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int REALM_NAME_FIELD_NUMBER = 5;
+  public static final int REALM_NAME_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object realmName_ = "";
   /**
@@ -235,7 +208,7 @@ private static final long serialVersionUID = 0L;
    * Realm name
    * </pre>
    *
-   * <code>string realm_name = 5 [json_name = "realmName"];</code>
+   * <code>string realm_name = 4 [json_name = "realmName"];</code>
    * @return The realmName.
    */
   @java.lang.Override
@@ -256,7 +229,7 @@ private static final long serialVersionUID = 0L;
    * Realm name
    * </pre>
    *
-   * <code>string realm_name = 5 [json_name = "realmName"];</code>
+   * <code>string realm_name = 4 [json_name = "realmName"];</code>
    * @return The bytes for realmName.
    */
   @java.lang.Override
@@ -274,188 +247,205 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CLIENT_ID_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object clientId_ = "";
+  public static final int AUTH_DETAILS_FIELD_NUMBER = 5;
+  private com.keycloak.event.v1.AuthDetails authDetails_;
   /**
    * <pre>
-   * Client identifier
+   * Authentication details
    * </pre>
    *
-   * <code>string client_id = 6 [json_name = "clientId"];</code>
-   * @return The clientId.
+   * <code>.keycloak.event.v1.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
+   * @return Whether the authDetails field is set.
    */
   @java.lang.Override
-  public java.lang.String getClientId() {
-    java.lang.Object ref = clientId_;
+  public boolean hasAuthDetails() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * Authentication details
+   * </pre>
+   *
+   * <code>.keycloak.event.v1.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
+   * @return The authDetails.
+   */
+  @java.lang.Override
+  public com.keycloak.event.v1.AuthDetails getAuthDetails() {
+    return authDetails_ == null ? com.keycloak.event.v1.AuthDetails.getDefaultInstance() : authDetails_;
+  }
+  /**
+   * <pre>
+   * Authentication details
+   * </pre>
+   *
+   * <code>.keycloak.event.v1.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
+   */
+  @java.lang.Override
+  public com.keycloak.event.v1.AuthDetailsOrBuilder getAuthDetailsOrBuilder() {
+    return authDetails_ == null ? com.keycloak.event.v1.AuthDetails.getDefaultInstance() : authDetails_;
+  }
+
+  public static final int RESOURCE_TYPE_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceType_ = "";
+  /**
+   * <pre>
+   * Resource type
+   * </pre>
+   *
+   * <code>string resource_type = 6 [json_name = "resourceType"];</code>
+   * @return The resourceType.
+   */
+  @java.lang.Override
+  public java.lang.String getResourceType() {
+    java.lang.Object ref = resourceType_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      clientId_ = s;
+      resourceType_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * Client identifier
+   * Resource type
    * </pre>
    *
-   * <code>string client_id = 6 [json_name = "clientId"];</code>
-   * @return The bytes for clientId.
+   * <code>string resource_type = 6 [json_name = "resourceType"];</code>
+   * @return The bytes for resourceType.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getClientIdBytes() {
-    java.lang.Object ref = clientId_;
+      getResourceTypeBytes() {
+    java.lang.Object ref = resourceType_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      clientId_ = b;
+      resourceType_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int USER_ID_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object userId_ = "";
+  public static final int OPERATION_TYPE_FIELD_NUMBER = 7;
+  private int operationType_ = 0;
   /**
    * <pre>
-   * User identifier
+   * Operation type
    * </pre>
    *
-   * <code>string user_id = 7 [json_name = "userId"];</code>
-   * @return The userId.
+   * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
+   * @return The enum numeric value on the wire for operationType.
+   */
+  @java.lang.Override public int getOperationTypeValue() {
+    return operationType_;
+  }
+  /**
+   * <pre>
+   * Operation type
+   * </pre>
+   *
+   * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
+   * @return The operationType.
+   */
+  @java.lang.Override public com.keycloak.event.v1.OperationType getOperationType() {
+    com.keycloak.event.v1.OperationType result = com.keycloak.event.v1.OperationType.forNumber(operationType_);
+    return result == null ? com.keycloak.event.v1.OperationType.UNRECOGNIZED : result;
+  }
+
+  public static final int RESOURCE_PATH_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourcePath_ = "";
+  /**
+   * <pre>
+   * Resource path
+   * </pre>
+   *
+   * <code>string resource_path = 8 [json_name = "resourcePath"];</code>
+   * @return The resourcePath.
    */
   @java.lang.Override
-  public java.lang.String getUserId() {
-    java.lang.Object ref = userId_;
+  public java.lang.String getResourcePath() {
+    java.lang.Object ref = resourcePath_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      userId_ = s;
+      resourcePath_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * User identifier
+   * Resource path
    * </pre>
    *
-   * <code>string user_id = 7 [json_name = "userId"];</code>
-   * @return The bytes for userId.
+   * <code>string resource_path = 8 [json_name = "resourcePath"];</code>
+   * @return The bytes for resourcePath.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getUserIdBytes() {
-    java.lang.Object ref = userId_;
+      getResourcePathBytes() {
+    java.lang.Object ref = resourcePath_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      userId_ = b;
+      resourcePath_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int SESSION_ID_FIELD_NUMBER = 8;
+  public static final int REPRESENTATION_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object sessionId_ = "";
+  private volatile java.lang.Object representation_ = "";
   /**
    * <pre>
-   * Session identifier
+   * Resource representation
    * </pre>
    *
-   * <code>string session_id = 8 [json_name = "sessionId"];</code>
-   * @return The sessionId.
+   * <code>string representation = 9 [json_name = "representation"];</code>
+   * @return The representation.
    */
   @java.lang.Override
-  public java.lang.String getSessionId() {
-    java.lang.Object ref = sessionId_;
+  public java.lang.String getRepresentation() {
+    java.lang.Object ref = representation_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      sessionId_ = s;
+      representation_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * Session identifier
+   * Resource representation
    * </pre>
    *
-   * <code>string session_id = 8 [json_name = "sessionId"];</code>
-   * @return The bytes for sessionId.
+   * <code>string representation = 9 [json_name = "representation"];</code>
+   * @return The bytes for representation.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getSessionIdBytes() {
-    java.lang.Object ref = sessionId_;
+      getRepresentationBytes() {
+    java.lang.Object ref = representation_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      sessionId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int IP_ADDRESS_FIELD_NUMBER = 9;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object ipAddress_ = "";
-  /**
-   * <pre>
-   * IP address of the client
-   * </pre>
-   *
-   * <code>string ip_address = 9 [json_name = "ipAddress"];</code>
-   * @return The ipAddress.
-   */
-  @java.lang.Override
-  public java.lang.String getIpAddress() {
-    java.lang.Object ref = ipAddress_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      ipAddress_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * IP address of the client
-   * </pre>
-   *
-   * <code>string ip_address = 9 [json_name = "ipAddress"];</code>
-   * @return The bytes for ipAddress.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getIpAddressBytes() {
-    java.lang.Object ref = ipAddress_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      ipAddress_ = b;
+      representation_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -515,7 +505,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String, java.lang.String> defaultEntry =
             com.google.protobuf.MapEntry
             .<java.lang.String, java.lang.String>newDefaultInstance(
-                ru.event.listener.extension.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_Event_DetailsEntry_descriptor, 
+                com.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AdminEvent_DetailsEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.STRING,
@@ -624,26 +614,26 @@ java.lang.String defaultValue) {
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getTime());
     }
-    if (type_ != ru.event.listener.extension.keycloak.event.v1.EventType.EVENT_TYPE_INVALID.getNumber()) {
-      output.writeEnum(3, type_);
-    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(realmId_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 4, realmId_);
+      com.google.protobuf.GeneratedMessage.writeString(output, 3, realmId_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(realmName_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 5, realmName_);
+      com.google.protobuf.GeneratedMessage.writeString(output, 4, realmName_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientId_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 6, clientId_);
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(5, getAuthDetails());
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(userId_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 7, userId_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(resourceType_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 6, resourceType_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(sessionId_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 8, sessionId_);
+    if (operationType_ != com.keycloak.event.v1.OperationType.OPERATION_TYPE_INVALID.getNumber()) {
+      output.writeEnum(7, operationType_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(ipAddress_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 9, ipAddress_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(resourcePath_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 8, resourcePath_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(representation_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 9, representation_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(error_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 10, error_);
@@ -670,27 +660,28 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getTime());
     }
-    if (type_ != ru.event.listener.extension.keycloak.event.v1.EventType.EVENT_TYPE_INVALID.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(3, type_);
-    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(realmId_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, realmId_);
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, realmId_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(realmName_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(5, realmName_);
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, realmName_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(clientId_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(6, clientId_);
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getAuthDetails());
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(userId_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(7, userId_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(resourceType_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(6, resourceType_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(sessionId_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(8, sessionId_);
+    if (operationType_ != com.keycloak.event.v1.OperationType.OPERATION_TYPE_INVALID.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(7, operationType_);
     }
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(ipAddress_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(9, ipAddress_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(resourcePath_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(8, resourcePath_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(representation_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(9, representation_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(error_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(10, error_);
@@ -715,10 +706,10 @@ java.lang.String defaultValue) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ru.event.listener.extension.keycloak.event.v1.Event)) {
+    if (!(obj instanceof com.keycloak.event.v1.AdminEvent)) {
       return super.equals(obj);
     }
-    ru.event.listener.extension.keycloak.event.v1.Event other = (ru.event.listener.extension.keycloak.event.v1.Event) obj;
+    com.keycloak.event.v1.AdminEvent other = (com.keycloak.event.v1.AdminEvent) obj;
 
     if (!getId()
         .equals(other.getId())) return false;
@@ -727,19 +718,22 @@ java.lang.String defaultValue) {
       if (!getTime()
           .equals(other.getTime())) return false;
     }
-    if (type_ != other.type_) return false;
     if (!getRealmId()
         .equals(other.getRealmId())) return false;
     if (!getRealmName()
         .equals(other.getRealmName())) return false;
-    if (!getClientId()
-        .equals(other.getClientId())) return false;
-    if (!getUserId()
-        .equals(other.getUserId())) return false;
-    if (!getSessionId()
-        .equals(other.getSessionId())) return false;
-    if (!getIpAddress()
-        .equals(other.getIpAddress())) return false;
+    if (hasAuthDetails() != other.hasAuthDetails()) return false;
+    if (hasAuthDetails()) {
+      if (!getAuthDetails()
+          .equals(other.getAuthDetails())) return false;
+    }
+    if (!getResourceType()
+        .equals(other.getResourceType())) return false;
+    if (operationType_ != other.operationType_) return false;
+    if (!getResourcePath()
+        .equals(other.getResourcePath())) return false;
+    if (!getRepresentation()
+        .equals(other.getRepresentation())) return false;
     if (!getError()
         .equals(other.getError())) return false;
     if (!internalGetDetails().equals(
@@ -761,20 +755,22 @@ java.lang.String defaultValue) {
       hash = (37 * hash) + TIME_FIELD_NUMBER;
       hash = (53 * hash) + getTime().hashCode();
     }
-    hash = (37 * hash) + TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + type_;
     hash = (37 * hash) + REALM_ID_FIELD_NUMBER;
     hash = (53 * hash) + getRealmId().hashCode();
     hash = (37 * hash) + REALM_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getRealmName().hashCode();
-    hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getClientId().hashCode();
-    hash = (37 * hash) + USER_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getUserId().hashCode();
-    hash = (37 * hash) + SESSION_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getSessionId().hashCode();
-    hash = (37 * hash) + IP_ADDRESS_FIELD_NUMBER;
-    hash = (53 * hash) + getIpAddress().hashCode();
+    if (hasAuthDetails()) {
+      hash = (37 * hash) + AUTH_DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthDetails().hashCode();
+    }
+    hash = (37 * hash) + RESOURCE_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getResourceType().hashCode();
+    hash = (37 * hash) + OPERATION_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + operationType_;
+    hash = (37 * hash) + RESOURCE_PATH_FIELD_NUMBER;
+    hash = (53 * hash) + getResourcePath().hashCode();
+    hash = (37 * hash) + REPRESENTATION_FIELD_NUMBER;
+    hash = (53 * hash) + getRepresentation().hashCode();
     hash = (37 * hash) + ERROR_FIELD_NUMBER;
     hash = (53 * hash) + getError().hashCode();
     if (!internalGetDetails().getMap().isEmpty()) {
@@ -786,44 +782,44 @@ java.lang.String defaultValue) {
     return hash;
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.Event parseFrom(
+  public static com.keycloak.event.v1.AdminEvent parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.Event parseFrom(
+  public static com.keycloak.event.v1.AdminEvent parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.Event parseFrom(
+  public static com.keycloak.event.v1.AdminEvent parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.Event parseFrom(
+  public static com.keycloak.event.v1.AdminEvent parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.Event parseFrom(byte[] data)
+  public static com.keycloak.event.v1.AdminEvent parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.Event parseFrom(
+  public static com.keycloak.event.v1.AdminEvent parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.Event parseFrom(java.io.InputStream input)
+  public static com.keycloak.event.v1.AdminEvent parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.Event parseFrom(
+  public static com.keycloak.event.v1.AdminEvent parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -831,26 +827,26 @@ java.lang.String defaultValue) {
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.Event parseDelimitedFrom(java.io.InputStream input)
+  public static com.keycloak.event.v1.AdminEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.Event parseDelimitedFrom(
+  public static com.keycloak.event.v1.AdminEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.Event parseFrom(
+  public static com.keycloak.event.v1.AdminEvent parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.Event parseFrom(
+  public static com.keycloak.event.v1.AdminEvent parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -863,7 +859,7 @@ java.lang.String defaultValue) {
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ru.event.listener.extension.keycloak.event.v1.Event prototype) {
+  public static Builder newBuilder(com.keycloak.event.v1.AdminEvent prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -880,18 +876,18 @@ java.lang.String defaultValue) {
   }
   /**
    * <pre>
-   * Event message for Keycloak authentication and authorization events
+   * Admin event message for Keycloak administration operations
    * </pre>
    *
-   * Protobuf type {@code keycloak.event.v1.Event}
+   * Protobuf type {@code keycloak.event.v1.AdminEvent}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:keycloak.event.v1.Event)
-      ru.event.listener.extension.keycloak.event.v1.EventOrBuilder {
+      // @@protoc_insertion_point(builder_implements:keycloak.event.v1.AdminEvent)
+      com.keycloak.event.v1.AdminEventOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ru.event.listener.extension.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_Event_descriptor;
+      return com.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AdminEvent_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -919,12 +915,12 @@ java.lang.String defaultValue) {
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ru.event.listener.extension.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_Event_fieldAccessorTable
+      return com.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AdminEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ru.event.listener.extension.keycloak.event.v1.Event.class, ru.event.listener.extension.keycloak.event.v1.Event.Builder.class);
+              com.keycloak.event.v1.AdminEvent.class, com.keycloak.event.v1.AdminEvent.Builder.class);
     }
 
-    // Construct using ru.event.listener.extension.keycloak.event.v1.Event.newBuilder()
+    // Construct using com.keycloak.event.v1.AdminEvent.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -938,6 +934,7 @@ java.lang.String defaultValue) {
       if (com.google.protobuf.GeneratedMessage
               .alwaysUseFieldBuilders) {
         internalGetTimeFieldBuilder();
+        internalGetAuthDetailsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -950,13 +947,17 @@ java.lang.String defaultValue) {
         timeBuilder_.dispose();
         timeBuilder_ = null;
       }
-      type_ = 0;
       realmId_ = "";
       realmName_ = "";
-      clientId_ = "";
-      userId_ = "";
-      sessionId_ = "";
-      ipAddress_ = "";
+      authDetails_ = null;
+      if (authDetailsBuilder_ != null) {
+        authDetailsBuilder_.dispose();
+        authDetailsBuilder_ = null;
+      }
+      resourceType_ = "";
+      operationType_ = 0;
+      resourcePath_ = "";
+      representation_ = "";
       error_ = "";
       internalGetMutableDetails().clear();
       return this;
@@ -965,17 +966,17 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ru.event.listener.extension.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_Event_descriptor;
+      return com.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AdminEvent_descriptor;
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.Event getDefaultInstanceForType() {
-      return ru.event.listener.extension.keycloak.event.v1.Event.getDefaultInstance();
+    public com.keycloak.event.v1.AdminEvent getDefaultInstanceForType() {
+      return com.keycloak.event.v1.AdminEvent.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.Event build() {
-      ru.event.listener.extension.keycloak.event.v1.Event result = buildPartial();
+    public com.keycloak.event.v1.AdminEvent build() {
+      com.keycloak.event.v1.AdminEvent result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -983,14 +984,14 @@ java.lang.String defaultValue) {
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.Event buildPartial() {
-      ru.event.listener.extension.keycloak.event.v1.Event result = new ru.event.listener.extension.keycloak.event.v1.Event(this);
+    public com.keycloak.event.v1.AdminEvent buildPartial() {
+      com.keycloak.event.v1.AdminEvent result = new com.keycloak.event.v1.AdminEvent(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(ru.event.listener.extension.keycloak.event.v1.Event result) {
+    private void buildPartial0(com.keycloak.event.v1.AdminEvent result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.id_ = id_;
@@ -1003,25 +1004,28 @@ java.lang.String defaultValue) {
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.type_ = type_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.realmId_ = realmId_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.realmName_ = realmName_;
       }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.authDetails_ = authDetailsBuilder_ == null
+            ? authDetails_
+            : authDetailsBuilder_.build();
+        to_bitField0_ |= 0x00000002;
+      }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.clientId_ = clientId_;
+        result.resourceType_ = resourceType_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.userId_ = userId_;
+        result.operationType_ = operationType_;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.sessionId_ = sessionId_;
+        result.resourcePath_ = resourcePath_;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.ipAddress_ = ipAddress_;
+        result.representation_ = representation_;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.error_ = error_;
@@ -1035,16 +1039,16 @@ java.lang.String defaultValue) {
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ru.event.listener.extension.keycloak.event.v1.Event) {
-        return mergeFrom((ru.event.listener.extension.keycloak.event.v1.Event)other);
+      if (other instanceof com.keycloak.event.v1.AdminEvent) {
+        return mergeFrom((com.keycloak.event.v1.AdminEvent)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ru.event.listener.extension.keycloak.event.v1.Event other) {
-      if (other == ru.event.listener.extension.keycloak.event.v1.Event.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.keycloak.event.v1.AdminEvent other) {
+      if (other == com.keycloak.event.v1.AdminEvent.getDefaultInstance()) return this;
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
         bitField0_ |= 0x00000001;
@@ -1053,36 +1057,34 @@ java.lang.String defaultValue) {
       if (other.hasTime()) {
         mergeTime(other.getTime());
       }
-      if (other.type_ != 0) {
-        setTypeValue(other.getTypeValue());
-      }
       if (!other.getRealmId().isEmpty()) {
         realmId_ = other.realmId_;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getRealmName().isEmpty()) {
         realmName_ = other.realmName_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
-      if (!other.getClientId().isEmpty()) {
-        clientId_ = other.clientId_;
+      if (other.hasAuthDetails()) {
+        mergeAuthDetails(other.getAuthDetails());
+      }
+      if (!other.getResourceType().isEmpty()) {
+        resourceType_ = other.resourceType_;
         bitField0_ |= 0x00000020;
         onChanged();
       }
-      if (!other.getUserId().isEmpty()) {
-        userId_ = other.userId_;
-        bitField0_ |= 0x00000040;
-        onChanged();
+      if (other.operationType_ != 0) {
+        setOperationTypeValue(other.getOperationTypeValue());
       }
-      if (!other.getSessionId().isEmpty()) {
-        sessionId_ = other.sessionId_;
+      if (!other.getResourcePath().isEmpty()) {
+        resourcePath_ = other.resourcePath_;
         bitField0_ |= 0x00000080;
         onChanged();
       }
-      if (!other.getIpAddress().isEmpty()) {
-        ipAddress_ = other.ipAddress_;
+      if (!other.getRepresentation().isEmpty()) {
+        representation_ = other.representation_;
         bitField0_ |= 0x00000100;
         onChanged();
       }
@@ -1132,38 +1134,40 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 24: {
-              type_ = input.readEnum();
+            case 26: {
+              realmId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
-            } // case 24
+            } // case 26
             case 34: {
-              realmId_ = input.readStringRequireUtf8();
+              realmName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
-              realmName_ = input.readStringRequireUtf8();
+              input.readMessage(
+                  internalGetAuthDetailsFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
-              clientId_ = input.readStringRequireUtf8();
+              resourceType_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000020;
               break;
             } // case 50
-            case 58: {
-              userId_ = input.readStringRequireUtf8();
+            case 56: {
+              operationType_ = input.readEnum();
               bitField0_ |= 0x00000040;
               break;
-            } // case 58
+            } // case 56
             case 66: {
-              sessionId_ = input.readStringRequireUtf8();
+              resourcePath_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000080;
               break;
             } // case 66
             case 74: {
-              ipAddress_ = input.readStringRequireUtf8();
+              representation_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000100;
               break;
             } // case 74
@@ -1447,84 +1451,13 @@ java.lang.String defaultValue) {
       return timeBuilder_;
     }
 
-    private int type_ = 0;
-    /**
-     * <pre>
-     * Event type
-     * </pre>
-     *
-     * <code>.keycloak.event.v1.EventType type = 3 [json_name = "type"];</code>
-     * @return The enum numeric value on the wire for type.
-     */
-    @java.lang.Override public int getTypeValue() {
-      return type_;
-    }
-    /**
-     * <pre>
-     * Event type
-     * </pre>
-     *
-     * <code>.keycloak.event.v1.EventType type = 3 [json_name = "type"];</code>
-     * @param value The enum numeric value on the wire for type to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTypeValue(int value) {
-      type_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Event type
-     * </pre>
-     *
-     * <code>.keycloak.event.v1.EventType type = 3 [json_name = "type"];</code>
-     * @return The type.
-     */
-    @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.EventType getType() {
-      ru.event.listener.extension.keycloak.event.v1.EventType result = ru.event.listener.extension.keycloak.event.v1.EventType.forNumber(type_);
-      return result == null ? ru.event.listener.extension.keycloak.event.v1.EventType.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * Event type
-     * </pre>
-     *
-     * <code>.keycloak.event.v1.EventType type = 3 [json_name = "type"];</code>
-     * @param value The type to set.
-     * @return This builder for chaining.
-     */
-    public Builder setType(ru.event.listener.extension.keycloak.event.v1.EventType value) {
-      if (value == null) { throw new NullPointerException(); }
-      bitField0_ |= 0x00000004;
-      type_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Event type
-     * </pre>
-     *
-     * <code>.keycloak.event.v1.EventType type = 3 [json_name = "type"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearType() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      type_ = 0;
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object realmId_ = "";
     /**
      * <pre>
      * Realm identifier
      * </pre>
      *
-     * <code>string realm_id = 4 [json_name = "realmId"];</code>
+     * <code>string realm_id = 3 [json_name = "realmId"];</code>
      * @return The realmId.
      */
     public java.lang.String getRealmId() {
@@ -1544,7 +1477,7 @@ java.lang.String defaultValue) {
      * Realm identifier
      * </pre>
      *
-     * <code>string realm_id = 4 [json_name = "realmId"];</code>
+     * <code>string realm_id = 3 [json_name = "realmId"];</code>
      * @return The bytes for realmId.
      */
     public com.google.protobuf.ByteString
@@ -1565,7 +1498,7 @@ java.lang.String defaultValue) {
      * Realm identifier
      * </pre>
      *
-     * <code>string realm_id = 4 [json_name = "realmId"];</code>
+     * <code>string realm_id = 3 [json_name = "realmId"];</code>
      * @param value The realmId to set.
      * @return This builder for chaining.
      */
@@ -1573,7 +1506,7 @@ java.lang.String defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       realmId_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1582,12 +1515,12 @@ java.lang.String defaultValue) {
      * Realm identifier
      * </pre>
      *
-     * <code>string realm_id = 4 [json_name = "realmId"];</code>
+     * <code>string realm_id = 3 [json_name = "realmId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRealmId() {
       realmId_ = getDefaultInstance().getRealmId();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1596,7 +1529,7 @@ java.lang.String defaultValue) {
      * Realm identifier
      * </pre>
      *
-     * <code>string realm_id = 4 [json_name = "realmId"];</code>
+     * <code>string realm_id = 3 [json_name = "realmId"];</code>
      * @param value The bytes for realmId to set.
      * @return This builder for chaining.
      */
@@ -1605,7 +1538,7 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       realmId_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1616,7 +1549,7 @@ java.lang.String defaultValue) {
      * Realm name
      * </pre>
      *
-     * <code>string realm_name = 5 [json_name = "realmName"];</code>
+     * <code>string realm_name = 4 [json_name = "realmName"];</code>
      * @return The realmName.
      */
     public java.lang.String getRealmName() {
@@ -1636,7 +1569,7 @@ java.lang.String defaultValue) {
      * Realm name
      * </pre>
      *
-     * <code>string realm_name = 5 [json_name = "realmName"];</code>
+     * <code>string realm_name = 4 [json_name = "realmName"];</code>
      * @return The bytes for realmName.
      */
     public com.google.protobuf.ByteString
@@ -1657,7 +1590,7 @@ java.lang.String defaultValue) {
      * Realm name
      * </pre>
      *
-     * <code>string realm_name = 5 [json_name = "realmName"];</code>
+     * <code>string realm_name = 4 [json_name = "realmName"];</code>
      * @param value The realmName to set.
      * @return This builder for chaining.
      */
@@ -1665,7 +1598,7 @@ java.lang.String defaultValue) {
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       realmName_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1674,12 +1607,12 @@ java.lang.String defaultValue) {
      * Realm name
      * </pre>
      *
-     * <code>string realm_name = 5 [json_name = "realmName"];</code>
+     * <code>string realm_name = 4 [json_name = "realmName"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRealmName() {
       realmName_ = getDefaultInstance().getRealmName();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1688,7 +1621,7 @@ java.lang.String defaultValue) {
      * Realm name
      * </pre>
      *
-     * <code>string realm_name = 5 [json_name = "realmName"];</code>
+     * <code>string realm_name = 4 [json_name = "realmName"];</code>
      * @param value The bytes for realmName to set.
      * @return This builder for chaining.
      */
@@ -1697,27 +1630,184 @@ java.lang.String defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       realmName_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
 
-    private java.lang.Object clientId_ = "";
+    private com.keycloak.event.v1.AuthDetails authDetails_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.keycloak.event.v1.AuthDetails, com.keycloak.event.v1.AuthDetails.Builder, com.keycloak.event.v1.AuthDetailsOrBuilder> authDetailsBuilder_;
     /**
      * <pre>
-     * Client identifier
+     * Authentication details
      * </pre>
      *
-     * <code>string client_id = 6 [json_name = "clientId"];</code>
-     * @return The clientId.
+     * <code>.keycloak.event.v1.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
+     * @return Whether the authDetails field is set.
      */
-    public java.lang.String getClientId() {
-      java.lang.Object ref = clientId_;
+    public boolean hasAuthDetails() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Authentication details
+     * </pre>
+     *
+     * <code>.keycloak.event.v1.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
+     * @return The authDetails.
+     */
+    public com.keycloak.event.v1.AuthDetails getAuthDetails() {
+      if (authDetailsBuilder_ == null) {
+        return authDetails_ == null ? com.keycloak.event.v1.AuthDetails.getDefaultInstance() : authDetails_;
+      } else {
+        return authDetailsBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Authentication details
+     * </pre>
+     *
+     * <code>.keycloak.event.v1.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
+     */
+    public Builder setAuthDetails(com.keycloak.event.v1.AuthDetails value) {
+      if (authDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        authDetails_ = value;
+      } else {
+        authDetailsBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Authentication details
+     * </pre>
+     *
+     * <code>.keycloak.event.v1.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
+     */
+    public Builder setAuthDetails(
+        com.keycloak.event.v1.AuthDetails.Builder builderForValue) {
+      if (authDetailsBuilder_ == null) {
+        authDetails_ = builderForValue.build();
+      } else {
+        authDetailsBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Authentication details
+     * </pre>
+     *
+     * <code>.keycloak.event.v1.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
+     */
+    public Builder mergeAuthDetails(com.keycloak.event.v1.AuthDetails value) {
+      if (authDetailsBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          authDetails_ != null &&
+          authDetails_ != com.keycloak.event.v1.AuthDetails.getDefaultInstance()) {
+          getAuthDetailsBuilder().mergeFrom(value);
+        } else {
+          authDetails_ = value;
+        }
+      } else {
+        authDetailsBuilder_.mergeFrom(value);
+      }
+      if (authDetails_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Authentication details
+     * </pre>
+     *
+     * <code>.keycloak.event.v1.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
+     */
+    public Builder clearAuthDetails() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      authDetails_ = null;
+      if (authDetailsBuilder_ != null) {
+        authDetailsBuilder_.dispose();
+        authDetailsBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Authentication details
+     * </pre>
+     *
+     * <code>.keycloak.event.v1.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
+     */
+    public com.keycloak.event.v1.AuthDetails.Builder getAuthDetailsBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return internalGetAuthDetailsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Authentication details
+     * </pre>
+     *
+     * <code>.keycloak.event.v1.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
+     */
+    public com.keycloak.event.v1.AuthDetailsOrBuilder getAuthDetailsOrBuilder() {
+      if (authDetailsBuilder_ != null) {
+        return authDetailsBuilder_.getMessageOrBuilder();
+      } else {
+        return authDetails_ == null ?
+            com.keycloak.event.v1.AuthDetails.getDefaultInstance() : authDetails_;
+      }
+    }
+    /**
+     * <pre>
+     * Authentication details
+     * </pre>
+     *
+     * <code>.keycloak.event.v1.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.keycloak.event.v1.AuthDetails, com.keycloak.event.v1.AuthDetails.Builder, com.keycloak.event.v1.AuthDetailsOrBuilder> 
+        internalGetAuthDetailsFieldBuilder() {
+      if (authDetailsBuilder_ == null) {
+        authDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.keycloak.event.v1.AuthDetails, com.keycloak.event.v1.AuthDetails.Builder, com.keycloak.event.v1.AuthDetailsOrBuilder>(
+                getAuthDetails(),
+                getParentForChildren(),
+                isClean());
+        authDetails_ = null;
+      }
+      return authDetailsBuilder_;
+    }
+
+    private java.lang.Object resourceType_ = "";
+    /**
+     * <pre>
+     * Resource type
+     * </pre>
+     *
+     * <code>string resource_type = 6 [json_name = "resourceType"];</code>
+     * @return The resourceType.
+     */
+    public java.lang.String getResourceType() {
+      java.lang.Object ref = resourceType_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        clientId_ = s;
+        resourceType_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -1725,20 +1815,20 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
-     * Client identifier
+     * Resource type
      * </pre>
      *
-     * <code>string client_id = 6 [json_name = "clientId"];</code>
-     * @return The bytes for clientId.
+     * <code>string resource_type = 6 [json_name = "resourceType"];</code>
+     * @return The bytes for resourceType.
      */
     public com.google.protobuf.ByteString
-        getClientIdBytes() {
-      java.lang.Object ref = clientId_;
+        getResourceTypeBytes() {
+      java.lang.Object ref = resourceType_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        clientId_ = b;
+        resourceType_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1746,162 +1836,141 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
-     * Client identifier
+     * Resource type
      * </pre>
      *
-     * <code>string client_id = 6 [json_name = "clientId"];</code>
-     * @param value The clientId to set.
+     * <code>string resource_type = 6 [json_name = "resourceType"];</code>
+     * @param value The resourceType to set.
      * @return This builder for chaining.
      */
-    public Builder setClientId(
+    public Builder setResourceType(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      clientId_ = value;
+      resourceType_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Client identifier
+     * Resource type
      * </pre>
      *
-     * <code>string client_id = 6 [json_name = "clientId"];</code>
+     * <code>string resource_type = 6 [json_name = "resourceType"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearClientId() {
-      clientId_ = getDefaultInstance().getClientId();
+    public Builder clearResourceType() {
+      resourceType_ = getDefaultInstance().getResourceType();
       bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Client identifier
+     * Resource type
      * </pre>
      *
-     * <code>string client_id = 6 [json_name = "clientId"];</code>
-     * @param value The bytes for clientId to set.
+     * <code>string resource_type = 6 [json_name = "resourceType"];</code>
+     * @param value The bytes for resourceType to set.
      * @return This builder for chaining.
      */
-    public Builder setClientIdBytes(
+    public Builder setResourceTypeBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      clientId_ = value;
+      resourceType_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
 
-    private java.lang.Object userId_ = "";
+    private int operationType_ = 0;
     /**
      * <pre>
-     * User identifier
+     * Operation type
      * </pre>
      *
-     * <code>string user_id = 7 [json_name = "userId"];</code>
-     * @return The userId.
+     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
+     * @return The enum numeric value on the wire for operationType.
      */
-    public java.lang.String getUserId() {
-      java.lang.Object ref = userId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        userId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
+    @java.lang.Override public int getOperationTypeValue() {
+      return operationType_;
     }
     /**
      * <pre>
-     * User identifier
+     * Operation type
      * </pre>
      *
-     * <code>string user_id = 7 [json_name = "userId"];</code>
-     * @return The bytes for userId.
-     */
-    public com.google.protobuf.ByteString
-        getUserIdBytes() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        userId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * User identifier
-     * </pre>
-     *
-     * <code>string user_id = 7 [json_name = "userId"];</code>
-     * @param value The userId to set.
+     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
+     * @param value The enum numeric value on the wire for operationType to set.
      * @return This builder for chaining.
      */
-    public Builder setUserId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      userId_ = value;
+    public Builder setOperationTypeValue(int value) {
+      operationType_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * User identifier
+     * Operation type
      * </pre>
      *
-     * <code>string user_id = 7 [json_name = "userId"];</code>
+     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
+     * @return The operationType.
+     */
+    @java.lang.Override
+    public com.keycloak.event.v1.OperationType getOperationType() {
+      com.keycloak.event.v1.OperationType result = com.keycloak.event.v1.OperationType.forNumber(operationType_);
+      return result == null ? com.keycloak.event.v1.OperationType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Operation type
+     * </pre>
+     *
+     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
+     * @param value The operationType to set.
      * @return This builder for chaining.
      */
-    public Builder clearUserId() {
-      userId_ = getDefaultInstance().getUserId();
+    public Builder setOperationType(com.keycloak.event.v1.OperationType value) {
+      if (value == null) { throw new NullPointerException(); }
+      bitField0_ |= 0x00000040;
+      operationType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Operation type
+     * </pre>
+     *
+     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOperationType() {
       bitField0_ = (bitField0_ & ~0x00000040);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * User identifier
-     * </pre>
-     *
-     * <code>string user_id = 7 [json_name = "userId"];</code>
-     * @param value The bytes for userId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setUserIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      userId_ = value;
-      bitField0_ |= 0x00000040;
+      operationType_ = 0;
       onChanged();
       return this;
     }
 
-    private java.lang.Object sessionId_ = "";
+    private java.lang.Object resourcePath_ = "";
     /**
      * <pre>
-     * Session identifier
+     * Resource path
      * </pre>
      *
-     * <code>string session_id = 8 [json_name = "sessionId"];</code>
-     * @return The sessionId.
+     * <code>string resource_path = 8 [json_name = "resourcePath"];</code>
+     * @return The resourcePath.
      */
-    public java.lang.String getSessionId() {
-      java.lang.Object ref = sessionId_;
+    public java.lang.String getResourcePath() {
+      java.lang.Object ref = resourcePath_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        sessionId_ = s;
+        resourcePath_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -1909,20 +1978,20 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
-     * Session identifier
+     * Resource path
      * </pre>
      *
-     * <code>string session_id = 8 [json_name = "sessionId"];</code>
-     * @return The bytes for sessionId.
+     * <code>string resource_path = 8 [json_name = "resourcePath"];</code>
+     * @return The bytes for resourcePath.
      */
     public com.google.protobuf.ByteString
-        getSessionIdBytes() {
-      java.lang.Object ref = sessionId_;
+        getResourcePathBytes() {
+      java.lang.Object ref = resourcePath_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        sessionId_ = b;
+        resourcePath_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1930,70 +1999,70 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
-     * Session identifier
+     * Resource path
      * </pre>
      *
-     * <code>string session_id = 8 [json_name = "sessionId"];</code>
-     * @param value The sessionId to set.
+     * <code>string resource_path = 8 [json_name = "resourcePath"];</code>
+     * @param value The resourcePath to set.
      * @return This builder for chaining.
      */
-    public Builder setSessionId(
+    public Builder setResourcePath(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      sessionId_ = value;
+      resourcePath_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Session identifier
+     * Resource path
      * </pre>
      *
-     * <code>string session_id = 8 [json_name = "sessionId"];</code>
+     * <code>string resource_path = 8 [json_name = "resourcePath"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearSessionId() {
-      sessionId_ = getDefaultInstance().getSessionId();
+    public Builder clearResourcePath() {
+      resourcePath_ = getDefaultInstance().getResourcePath();
       bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Session identifier
+     * Resource path
      * </pre>
      *
-     * <code>string session_id = 8 [json_name = "sessionId"];</code>
-     * @param value The bytes for sessionId to set.
+     * <code>string resource_path = 8 [json_name = "resourcePath"];</code>
+     * @param value The bytes for resourcePath to set.
      * @return This builder for chaining.
      */
-    public Builder setSessionIdBytes(
+    public Builder setResourcePathBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      sessionId_ = value;
+      resourcePath_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
 
-    private java.lang.Object ipAddress_ = "";
+    private java.lang.Object representation_ = "";
     /**
      * <pre>
-     * IP address of the client
+     * Resource representation
      * </pre>
      *
-     * <code>string ip_address = 9 [json_name = "ipAddress"];</code>
-     * @return The ipAddress.
+     * <code>string representation = 9 [json_name = "representation"];</code>
+     * @return The representation.
      */
-    public java.lang.String getIpAddress() {
-      java.lang.Object ref = ipAddress_;
+    public java.lang.String getRepresentation() {
+      java.lang.Object ref = representation_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        ipAddress_ = s;
+        representation_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -2001,20 +2070,20 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
-     * IP address of the client
+     * Resource representation
      * </pre>
      *
-     * <code>string ip_address = 9 [json_name = "ipAddress"];</code>
-     * @return The bytes for ipAddress.
+     * <code>string representation = 9 [json_name = "representation"];</code>
+     * @return The bytes for representation.
      */
     public com.google.protobuf.ByteString
-        getIpAddressBytes() {
-      java.lang.Object ref = ipAddress_;
+        getRepresentationBytes() {
+      java.lang.Object ref = representation_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        ipAddress_ = b;
+        representation_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2022,49 +2091,49 @@ java.lang.String defaultValue) {
     }
     /**
      * <pre>
-     * IP address of the client
+     * Resource representation
      * </pre>
      *
-     * <code>string ip_address = 9 [json_name = "ipAddress"];</code>
-     * @param value The ipAddress to set.
+     * <code>string representation = 9 [json_name = "representation"];</code>
+     * @param value The representation to set.
      * @return This builder for chaining.
      */
-    public Builder setIpAddress(
+    public Builder setRepresentation(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      ipAddress_ = value;
+      representation_ = value;
       bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * IP address of the client
+     * Resource representation
      * </pre>
      *
-     * <code>string ip_address = 9 [json_name = "ipAddress"];</code>
+     * <code>string representation = 9 [json_name = "representation"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearIpAddress() {
-      ipAddress_ = getDefaultInstance().getIpAddress();
+    public Builder clearRepresentation() {
+      representation_ = getDefaultInstance().getRepresentation();
       bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * IP address of the client
+     * Resource representation
      * </pre>
      *
-     * <code>string ip_address = 9 [json_name = "ipAddress"];</code>
-     * @param value The bytes for ipAddress to set.
+     * <code>string representation = 9 [json_name = "representation"];</code>
+     * @param value The bytes for representation to set.
      * @return This builder for chaining.
      */
-    public Builder setIpAddressBytes(
+    public Builder setRepresentationBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      ipAddress_ = value;
+      representation_ = value;
       bitField0_ |= 0x00000100;
       onChanged();
       return this;
@@ -2317,23 +2386,23 @@ java.lang.String defaultValue) {
       return this;
     }
 
-    // @@protoc_insertion_point(builder_scope:keycloak.event.v1.Event)
+    // @@protoc_insertion_point(builder_scope:keycloak.event.v1.AdminEvent)
   }
 
-  // @@protoc_insertion_point(class_scope:keycloak.event.v1.Event)
-  private static final ru.event.listener.extension.keycloak.event.v1.Event DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:keycloak.event.v1.AdminEvent)
+  private static final com.keycloak.event.v1.AdminEvent DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ru.event.listener.extension.keycloak.event.v1.Event();
+    DEFAULT_INSTANCE = new com.keycloak.event.v1.AdminEvent();
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.Event getDefaultInstance() {
+  public static com.keycloak.event.v1.AdminEvent getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Event>
-      PARSER = new com.google.protobuf.AbstractParser<Event>() {
+  private static final com.google.protobuf.Parser<AdminEvent>
+      PARSER = new com.google.protobuf.AbstractParser<AdminEvent>() {
     @java.lang.Override
-    public Event parsePartialFrom(
+    public AdminEvent parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2352,17 +2421,17 @@ java.lang.String defaultValue) {
     }
   };
 
-  public static com.google.protobuf.Parser<Event> parser() {
+  public static com.google.protobuf.Parser<AdminEvent> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Event> getParserForType() {
+  public com.google.protobuf.Parser<AdminEvent> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public ru.event.listener.extension.keycloak.event.v1.Event getDefaultInstanceForType() {
+  public com.keycloak.event.v1.AdminEvent getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -16,7 +16,6 @@ option php_namespace = "Keycloak\\Event\\V1";
 
 import "keycloak/event/v1/event.proto";
 import "google/protobuf/timestamp.proto";
-import "validate/validate.proto";
 
 // EventAPI service provides methods for creating and managing Keycloak events
 // through gRPC interface. It supports both admin events (administrative operations)
@@ -36,13 +35,13 @@ service EventAPI {
 // the operation, including authentication details, resource information, and any errors.
 message CreateAdminRequest {
   // Unique identifier for the admin event
-  string id = 1 [(validate.rules).string.uuid = true];
+  string id = 1;
 
   // Timestamp when the admin event occurred
-  google.protobuf.Timestamp time = 2 [(validate.rules).timestamp.required = true];
+  google.protobuf.Timestamp time = 2;
 
   // Unique identifier of the realm where the event occurred
-  string realm_id = 3 [(validate.rules).string.uuid = true];
+  string realm_id = 3;
 
   // Name of the realm where the event occurred
   string realm_name = 4;
@@ -54,7 +53,7 @@ message CreateAdminRequest {
   string resource_type = 6;
 
   // Type of operation performed (create, update, delete, action)
-  OperationType operation_type = 7 [(validate.rules).enum.defined_only = true];
+  OperationType operation_type = 7;
 
   // Path to the resource that was affected by the operation
   string resource_path = 8;
@@ -66,29 +65,25 @@ message CreateAdminRequest {
   string error = 10;
 
   // Additional details about the event in key-value pairs
-  map<string, string> details = 11 [
-    (validate.rules).map = {
-      ignore_empty: true,
-    }
-  ];
+  map<string, string> details = 11;
 
   // AuthDetails contains authentication information about the user or client
   // who performed the administrative operation.
   message AuthDetails {
     // Unique identifier of the realm where the authentication occurred
-    string realm_id = 1 [(validate.rules).string.uuid = true];
+    string realm_id = 1;
 
     // Name of the realm where the authentication occurred
     string realm_name = 2;
 
     // Unique identifier of the client used for the operation
-    string client_id = 3 [(validate.rules).string.uuid = true];
+    string client_id = 3;
 
     // Unique identifier of the user who performed the operation
-    string user_id = 4 [(validate.rules).string.uuid = true];
+    string user_id = 4;
 
     // IP address of the client that initiated the operation
-    string ip_address = 5 [(validate.rules).string.ip = true];
+    string ip_address = 5;
   }
 }
 
@@ -101,41 +96,37 @@ message CreateAdminResponse {}
 // information about the event, including user details, session information, and any errors.
 message CreateRequest {
   // Unique identifier for the event
-  string id = 1 [(validate.rules).string.uuid = true];
+  string id = 1;
 
   // Timestamp when the event occurred
-  google.protobuf.Timestamp time = 2 [(validate.rules).timestamp.required = true];
+  google.protobuf.Timestamp time = 2;
 
   // Type of event that occurred (login, logout, token exchange, etc.)
-  EventType type = 3 [(validate.rules).enum.defined_only = true];
+  EventType type = 3;
 
   // Unique identifier of the realm where the event occurred
-  string realm_id = 4 [(validate.rules).string.uuid = true];
+  string realm_id = 4;
 
   // Name of the realm where the event occurred
   string realm_name = 5;
 
   // Unique identifier of the client involved in the event
-  string client_id = 6 [(validate.rules).string.uuid = true];
+  string client_id = 6;
 
   // Unique identifier of the user involved in the event
-  string user_id = 7 [(validate.rules).string.uuid = true];
+  string user_id = 7;
 
   // Unique identifier of the user session
-  string session_id = 8 [(validate.rules).string.uuid = true];
+  string session_id = 8;
 
   // IP address of the client that initiated the event
-  string ip_address = 9 [(validate.rules).string.ip = true];
+  string ip_address = 9;
 
   // Error message if the event represents a failed operation (optional)
   string error = 10;
 
   // Additional details about the event in key-value pairs
-  map<string, string> details = 11 [
-    (validate.rules).map = {
-      ignore_empty: true,
-    }
-  ];
+  map<string, string> details = 11;
 }
 
 // CreateResponse represents the response for creating a regular event.

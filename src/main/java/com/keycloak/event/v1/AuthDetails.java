@@ -3,7 +3,7 @@
 // source: keycloak/event/v1/event.proto
 // Protobuf Java Version: 4.33.5
 
-package ru.event.listener.extension.keycloak.event.v1;
+package com.keycloak.event.v1;
 
 /**
  * <pre>
@@ -41,15 +41,15 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ru.event.listener.extension.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AuthDetails_descriptor;
+    return com.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AuthDetails_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ru.event.listener.extension.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AuthDetails_fieldAccessorTable
+    return com.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AuthDetails_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ru.event.listener.extension.keycloak.event.v1.AuthDetails.class, ru.event.listener.extension.keycloak.event.v1.AuthDetails.Builder.class);
+            com.keycloak.event.v1.AuthDetails.class, com.keycloak.event.v1.AuthDetails.Builder.class);
   }
 
   public static final int REALM_ID_FIELD_NUMBER = 1;
@@ -350,10 +350,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ru.event.listener.extension.keycloak.event.v1.AuthDetails)) {
+    if (!(obj instanceof com.keycloak.event.v1.AuthDetails)) {
       return super.equals(obj);
     }
-    ru.event.listener.extension.keycloak.event.v1.AuthDetails other = (ru.event.listener.extension.keycloak.event.v1.AuthDetails) obj;
+    com.keycloak.event.v1.AuthDetails other = (com.keycloak.event.v1.AuthDetails) obj;
 
     if (!getRealmId()
         .equals(other.getRealmId())) return false;
@@ -391,44 +391,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.AuthDetails parseFrom(
+  public static com.keycloak.event.v1.AuthDetails parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.AuthDetails parseFrom(
+  public static com.keycloak.event.v1.AuthDetails parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.AuthDetails parseFrom(
+  public static com.keycloak.event.v1.AuthDetails parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.AuthDetails parseFrom(
+  public static com.keycloak.event.v1.AuthDetails parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.AuthDetails parseFrom(byte[] data)
+  public static com.keycloak.event.v1.AuthDetails parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.AuthDetails parseFrom(
+  public static com.keycloak.event.v1.AuthDetails parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.AuthDetails parseFrom(java.io.InputStream input)
+  public static com.keycloak.event.v1.AuthDetails parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.AuthDetails parseFrom(
+  public static com.keycloak.event.v1.AuthDetails parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -436,26 +436,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.AuthDetails parseDelimitedFrom(java.io.InputStream input)
+  public static com.keycloak.event.v1.AuthDetails parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.AuthDetails parseDelimitedFrom(
+  public static com.keycloak.event.v1.AuthDetails parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.AuthDetails parseFrom(
+  public static com.keycloak.event.v1.AuthDetails parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.AuthDetails parseFrom(
+  public static com.keycloak.event.v1.AuthDetails parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -468,7 +468,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ru.event.listener.extension.keycloak.event.v1.AuthDetails prototype) {
+  public static Builder newBuilder(com.keycloak.event.v1.AuthDetails prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -493,21 +493,21 @@ private static final long serialVersionUID = 0L;
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:keycloak.event.v1.AuthDetails)
-      ru.event.listener.extension.keycloak.event.v1.AuthDetailsOrBuilder {
+      com.keycloak.event.v1.AuthDetailsOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ru.event.listener.extension.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AuthDetails_descriptor;
+      return com.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AuthDetails_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ru.event.listener.extension.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AuthDetails_fieldAccessorTable
+      return com.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AuthDetails_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ru.event.listener.extension.keycloak.event.v1.AuthDetails.class, ru.event.listener.extension.keycloak.event.v1.AuthDetails.Builder.class);
+              com.keycloak.event.v1.AuthDetails.class, com.keycloak.event.v1.AuthDetails.Builder.class);
     }
 
-    // Construct using ru.event.listener.extension.keycloak.event.v1.AuthDetails.newBuilder()
+    // Construct using com.keycloak.event.v1.AuthDetails.newBuilder()
     private Builder() {
 
     }
@@ -532,17 +532,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ru.event.listener.extension.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AuthDetails_descriptor;
+      return com.keycloak.event.v1.EventProto.internal_static_keycloak_event_v1_AuthDetails_descriptor;
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.AuthDetails getDefaultInstanceForType() {
-      return ru.event.listener.extension.keycloak.event.v1.AuthDetails.getDefaultInstance();
+    public com.keycloak.event.v1.AuthDetails getDefaultInstanceForType() {
+      return com.keycloak.event.v1.AuthDetails.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.AuthDetails build() {
-      ru.event.listener.extension.keycloak.event.v1.AuthDetails result = buildPartial();
+    public com.keycloak.event.v1.AuthDetails build() {
+      com.keycloak.event.v1.AuthDetails result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -550,14 +550,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.AuthDetails buildPartial() {
-      ru.event.listener.extension.keycloak.event.v1.AuthDetails result = new ru.event.listener.extension.keycloak.event.v1.AuthDetails(this);
+    public com.keycloak.event.v1.AuthDetails buildPartial() {
+      com.keycloak.event.v1.AuthDetails result = new com.keycloak.event.v1.AuthDetails(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(ru.event.listener.extension.keycloak.event.v1.AuthDetails result) {
+    private void buildPartial0(com.keycloak.event.v1.AuthDetails result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.realmId_ = realmId_;
@@ -578,16 +578,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ru.event.listener.extension.keycloak.event.v1.AuthDetails) {
-        return mergeFrom((ru.event.listener.extension.keycloak.event.v1.AuthDetails)other);
+      if (other instanceof com.keycloak.event.v1.AuthDetails) {
+        return mergeFrom((com.keycloak.event.v1.AuthDetails)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ru.event.listener.extension.keycloak.event.v1.AuthDetails other) {
-      if (other == ru.event.listener.extension.keycloak.event.v1.AuthDetails.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.keycloak.event.v1.AuthDetails other) {
+      if (other == com.keycloak.event.v1.AuthDetails.getDefaultInstance()) return this;
       if (!other.getRealmId().isEmpty()) {
         realmId_ = other.realmId_;
         bitField0_ |= 0x00000001;
@@ -1145,12 +1145,12 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:keycloak.event.v1.AuthDetails)
-  private static final ru.event.listener.extension.keycloak.event.v1.AuthDetails DEFAULT_INSTANCE;
+  private static final com.keycloak.event.v1.AuthDetails DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ru.event.listener.extension.keycloak.event.v1.AuthDetails();
+    DEFAULT_INSTANCE = new com.keycloak.event.v1.AuthDetails();
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.AuthDetails getDefaultInstance() {
+  public static com.keycloak.event.v1.AuthDetails getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -1186,7 +1186,7 @@ private static final long serialVersionUID = 0L;
   }
 
   @java.lang.Override
-  public ru.event.listener.extension.keycloak.event.v1.AuthDetails getDefaultInstanceForType() {
+  public com.keycloak.event.v1.AuthDetails getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

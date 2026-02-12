@@ -3,7 +3,7 @@
 // source: keycloak/event/v1/event_api.proto
 // Protobuf Java Version: 4.33.5
 
-package ru.event.listener.extension.keycloak.event.v1;
+package com.keycloak.event.v1;
 
 /**
  * <pre>
@@ -46,7 +46,7 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_descriptor;
+    return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_descriptor;
   }
 
   @SuppressWarnings({"rawtypes"})
@@ -64,9 +64,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_fieldAccessorTable
+    return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.class, ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.Builder.class);
+            com.keycloak.event.v1.CreateAdminRequest.class, com.keycloak.event.v1.CreateAdminRequest.Builder.class);
   }
 
   public interface AuthDetailsOrBuilder extends
@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier of the realm where the authentication occurred
      * </pre>
      *
-     * <code>string realm_id = 1 [json_name = "realmId", (.validate.rules) = { ... }</code>
+     * <code>string realm_id = 1 [json_name = "realmId"];</code>
      * @return The realmId.
      */
     java.lang.String getRealmId();
@@ -87,7 +87,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier of the realm where the authentication occurred
      * </pre>
      *
-     * <code>string realm_id = 1 [json_name = "realmId", (.validate.rules) = { ... }</code>
+     * <code>string realm_id = 1 [json_name = "realmId"];</code>
      * @return The bytes for realmId.
      */
     com.google.protobuf.ByteString
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier of the client used for the operation
      * </pre>
      *
-     * <code>string client_id = 3 [json_name = "clientId", (.validate.rules) = { ... }</code>
+     * <code>string client_id = 3 [json_name = "clientId"];</code>
      * @return The clientId.
      */
     java.lang.String getClientId();
@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier of the client used for the operation
      * </pre>
      *
-     * <code>string client_id = 3 [json_name = "clientId", (.validate.rules) = { ... }</code>
+     * <code>string client_id = 3 [json_name = "clientId"];</code>
      * @return The bytes for clientId.
      */
     com.google.protobuf.ByteString
@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier of the user who performed the operation
      * </pre>
      *
-     * <code>string user_id = 4 [json_name = "userId", (.validate.rules) = { ... }</code>
+     * <code>string user_id = 4 [json_name = "userId"];</code>
      * @return The userId.
      */
     java.lang.String getUserId();
@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier of the user who performed the operation
      * </pre>
      *
-     * <code>string user_id = 4 [json_name = "userId", (.validate.rules) = { ... }</code>
+     * <code>string user_id = 4 [json_name = "userId"];</code>
      * @return The bytes for userId.
      */
     com.google.protobuf.ByteString
@@ -158,7 +158,7 @@ private static final long serialVersionUID = 0L;
      * IP address of the client that initiated the operation
      * </pre>
      *
-     * <code>string ip_address = 5 [json_name = "ipAddress", (.validate.rules) = { ... }</code>
+     * <code>string ip_address = 5 [json_name = "ipAddress"];</code>
      * @return The ipAddress.
      */
     java.lang.String getIpAddress();
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
      * IP address of the client that initiated the operation
      * </pre>
      *
-     * <code>string ip_address = 5 [json_name = "ipAddress", (.validate.rules) = { ... }</code>
+     * <code>string ip_address = 5 [json_name = "ipAddress"];</code>
      * @return The bytes for ipAddress.
      */
     com.google.protobuf.ByteString
@@ -209,15 +209,15 @@ private static final long serialVersionUID = 0L;
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_AuthDetails_descriptor;
+      return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_AuthDetails_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_AuthDetails_fieldAccessorTable
+      return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_AuthDetails_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.class, ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.Builder.class);
+              com.keycloak.event.v1.CreateAdminRequest.AuthDetails.class, com.keycloak.event.v1.CreateAdminRequest.AuthDetails.Builder.class);
     }
 
     public static final int REALM_ID_FIELD_NUMBER = 1;
@@ -228,7 +228,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier of the realm where the authentication occurred
      * </pre>
      *
-     * <code>string realm_id = 1 [json_name = "realmId", (.validate.rules) = { ... }</code>
+     * <code>string realm_id = 1 [json_name = "realmId"];</code>
      * @return The realmId.
      */
     @java.lang.Override
@@ -249,7 +249,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier of the realm where the authentication occurred
      * </pre>
      *
-     * <code>string realm_id = 1 [json_name = "realmId", (.validate.rules) = { ... }</code>
+     * <code>string realm_id = 1 [json_name = "realmId"];</code>
      * @return The bytes for realmId.
      */
     @java.lang.Override
@@ -322,7 +322,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier of the client used for the operation
      * </pre>
      *
-     * <code>string client_id = 3 [json_name = "clientId", (.validate.rules) = { ... }</code>
+     * <code>string client_id = 3 [json_name = "clientId"];</code>
      * @return The clientId.
      */
     @java.lang.Override
@@ -343,7 +343,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier of the client used for the operation
      * </pre>
      *
-     * <code>string client_id = 3 [json_name = "clientId", (.validate.rules) = { ... }</code>
+     * <code>string client_id = 3 [json_name = "clientId"];</code>
      * @return The bytes for clientId.
      */
     @java.lang.Override
@@ -369,7 +369,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier of the user who performed the operation
      * </pre>
      *
-     * <code>string user_id = 4 [json_name = "userId", (.validate.rules) = { ... }</code>
+     * <code>string user_id = 4 [json_name = "userId"];</code>
      * @return The userId.
      */
     @java.lang.Override
@@ -390,7 +390,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier of the user who performed the operation
      * </pre>
      *
-     * <code>string user_id = 4 [json_name = "userId", (.validate.rules) = { ... }</code>
+     * <code>string user_id = 4 [json_name = "userId"];</code>
      * @return The bytes for userId.
      */
     @java.lang.Override
@@ -416,7 +416,7 @@ private static final long serialVersionUID = 0L;
      * IP address of the client that initiated the operation
      * </pre>
      *
-     * <code>string ip_address = 5 [json_name = "ipAddress", (.validate.rules) = { ... }</code>
+     * <code>string ip_address = 5 [json_name = "ipAddress"];</code>
      * @return The ipAddress.
      */
     @java.lang.Override
@@ -437,7 +437,7 @@ private static final long serialVersionUID = 0L;
      * IP address of the client that initiated the operation
      * </pre>
      *
-     * <code>string ip_address = 5 [json_name = "ipAddress", (.validate.rules) = { ... }</code>
+     * <code>string ip_address = 5 [json_name = "ipAddress"];</code>
      * @return The bytes for ipAddress.
      */
     @java.lang.Override
@@ -518,10 +518,10 @@ private static final long serialVersionUID = 0L;
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails)) {
+      if (!(obj instanceof com.keycloak.event.v1.CreateAdminRequest.AuthDetails)) {
         return super.equals(obj);
       }
-      ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails other = (ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails) obj;
+      com.keycloak.event.v1.CreateAdminRequest.AuthDetails other = (com.keycloak.event.v1.CreateAdminRequest.AuthDetails) obj;
 
       if (!getRealmId()
           .equals(other.getRealmId())) return false;
@@ -559,44 +559,44 @@ private static final long serialVersionUID = 0L;
       return hash;
     }
 
-    public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
+    public static com.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
+    public static com.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
+    public static com.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
+    public static com.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(byte[] data)
+    public static com.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
+    public static com.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(java.io.InputStream input)
+    public static com.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
+    public static com.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -604,26 +604,26 @@ private static final long serialVersionUID = 0L;
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails parseDelimitedFrom(java.io.InputStream input)
+    public static com.keycloak.event.v1.CreateAdminRequest.AuthDetails parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails parseDelimitedFrom(
+    public static com.keycloak.event.v1.CreateAdminRequest.AuthDetails parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
+    public static com.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
+    public static com.keycloak.event.v1.CreateAdminRequest.AuthDetails parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails prototype) {
+    public static Builder newBuilder(com.keycloak.event.v1.CreateAdminRequest.AuthDetails prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -662,21 +662,21 @@ private static final long serialVersionUID = 0L;
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:keycloak.event.v1.CreateAdminRequest.AuthDetails)
-        ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetailsOrBuilder {
+        com.keycloak.event.v1.CreateAdminRequest.AuthDetailsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_AuthDetails_descriptor;
+        return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_AuthDetails_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_AuthDetails_fieldAccessorTable
+        return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_AuthDetails_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.class, ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.Builder.class);
+                com.keycloak.event.v1.CreateAdminRequest.AuthDetails.class, com.keycloak.event.v1.CreateAdminRequest.AuthDetails.Builder.class);
       }
 
-      // Construct using ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.newBuilder()
+      // Construct using com.keycloak.event.v1.CreateAdminRequest.AuthDetails.newBuilder()
       private Builder() {
 
       }
@@ -701,17 +701,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_AuthDetails_descriptor;
+        return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_AuthDetails_descriptor;
       }
 
       @java.lang.Override
-      public ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails getDefaultInstanceForType() {
-        return ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.getDefaultInstance();
+      public com.keycloak.event.v1.CreateAdminRequest.AuthDetails getDefaultInstanceForType() {
+        return com.keycloak.event.v1.CreateAdminRequest.AuthDetails.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails build() {
-        ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails result = buildPartial();
+      public com.keycloak.event.v1.CreateAdminRequest.AuthDetails build() {
+        com.keycloak.event.v1.CreateAdminRequest.AuthDetails result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -719,14 +719,14 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
-      public ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails buildPartial() {
-        ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails result = new ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails(this);
+      public com.keycloak.event.v1.CreateAdminRequest.AuthDetails buildPartial() {
+        com.keycloak.event.v1.CreateAdminRequest.AuthDetails result = new com.keycloak.event.v1.CreateAdminRequest.AuthDetails(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails result) {
+      private void buildPartial0(com.keycloak.event.v1.CreateAdminRequest.AuthDetails result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.realmId_ = realmId_;
@@ -747,16 +747,16 @@ private static final long serialVersionUID = 0L;
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails) {
-          return mergeFrom((ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails)other);
+        if (other instanceof com.keycloak.event.v1.CreateAdminRequest.AuthDetails) {
+          return mergeFrom((com.keycloak.event.v1.CreateAdminRequest.AuthDetails)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails other) {
-        if (other == ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.keycloak.event.v1.CreateAdminRequest.AuthDetails other) {
+        if (other == com.keycloak.event.v1.CreateAdminRequest.AuthDetails.getDefaultInstance()) return this;
         if (!other.getRealmId().isEmpty()) {
           realmId_ = other.realmId_;
           bitField0_ |= 0x00000001;
@@ -856,7 +856,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the realm where the authentication occurred
        * </pre>
        *
-       * <code>string realm_id = 1 [json_name = "realmId", (.validate.rules) = { ... }</code>
+       * <code>string realm_id = 1 [json_name = "realmId"];</code>
        * @return The realmId.
        */
       public java.lang.String getRealmId() {
@@ -876,7 +876,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the realm where the authentication occurred
        * </pre>
        *
-       * <code>string realm_id = 1 [json_name = "realmId", (.validate.rules) = { ... }</code>
+       * <code>string realm_id = 1 [json_name = "realmId"];</code>
        * @return The bytes for realmId.
        */
       public com.google.protobuf.ByteString
@@ -897,7 +897,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the realm where the authentication occurred
        * </pre>
        *
-       * <code>string realm_id = 1 [json_name = "realmId", (.validate.rules) = { ... }</code>
+       * <code>string realm_id = 1 [json_name = "realmId"];</code>
        * @param value The realmId to set.
        * @return This builder for chaining.
        */
@@ -914,7 +914,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the realm where the authentication occurred
        * </pre>
        *
-       * <code>string realm_id = 1 [json_name = "realmId", (.validate.rules) = { ... }</code>
+       * <code>string realm_id = 1 [json_name = "realmId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearRealmId() {
@@ -928,7 +928,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the realm where the authentication occurred
        * </pre>
        *
-       * <code>string realm_id = 1 [json_name = "realmId", (.validate.rules) = { ... }</code>
+       * <code>string realm_id = 1 [json_name = "realmId"];</code>
        * @param value The bytes for realmId to set.
        * @return This builder for chaining.
        */
@@ -1040,7 +1040,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the client used for the operation
        * </pre>
        *
-       * <code>string client_id = 3 [json_name = "clientId", (.validate.rules) = { ... }</code>
+       * <code>string client_id = 3 [json_name = "clientId"];</code>
        * @return The clientId.
        */
       public java.lang.String getClientId() {
@@ -1060,7 +1060,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the client used for the operation
        * </pre>
        *
-       * <code>string client_id = 3 [json_name = "clientId", (.validate.rules) = { ... }</code>
+       * <code>string client_id = 3 [json_name = "clientId"];</code>
        * @return The bytes for clientId.
        */
       public com.google.protobuf.ByteString
@@ -1081,7 +1081,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the client used for the operation
        * </pre>
        *
-       * <code>string client_id = 3 [json_name = "clientId", (.validate.rules) = { ... }</code>
+       * <code>string client_id = 3 [json_name = "clientId"];</code>
        * @param value The clientId to set.
        * @return This builder for chaining.
        */
@@ -1098,7 +1098,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the client used for the operation
        * </pre>
        *
-       * <code>string client_id = 3 [json_name = "clientId", (.validate.rules) = { ... }</code>
+       * <code>string client_id = 3 [json_name = "clientId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearClientId() {
@@ -1112,7 +1112,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the client used for the operation
        * </pre>
        *
-       * <code>string client_id = 3 [json_name = "clientId", (.validate.rules) = { ... }</code>
+       * <code>string client_id = 3 [json_name = "clientId"];</code>
        * @param value The bytes for clientId to set.
        * @return This builder for chaining.
        */
@@ -1132,7 +1132,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the user who performed the operation
        * </pre>
        *
-       * <code>string user_id = 4 [json_name = "userId", (.validate.rules) = { ... }</code>
+       * <code>string user_id = 4 [json_name = "userId"];</code>
        * @return The userId.
        */
       public java.lang.String getUserId() {
@@ -1152,7 +1152,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the user who performed the operation
        * </pre>
        *
-       * <code>string user_id = 4 [json_name = "userId", (.validate.rules) = { ... }</code>
+       * <code>string user_id = 4 [json_name = "userId"];</code>
        * @return The bytes for userId.
        */
       public com.google.protobuf.ByteString
@@ -1173,7 +1173,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the user who performed the operation
        * </pre>
        *
-       * <code>string user_id = 4 [json_name = "userId", (.validate.rules) = { ... }</code>
+       * <code>string user_id = 4 [json_name = "userId"];</code>
        * @param value The userId to set.
        * @return This builder for chaining.
        */
@@ -1190,7 +1190,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the user who performed the operation
        * </pre>
        *
-       * <code>string user_id = 4 [json_name = "userId", (.validate.rules) = { ... }</code>
+       * <code>string user_id = 4 [json_name = "userId"];</code>
        * @return This builder for chaining.
        */
       public Builder clearUserId() {
@@ -1204,7 +1204,7 @@ private static final long serialVersionUID = 0L;
        * Unique identifier of the user who performed the operation
        * </pre>
        *
-       * <code>string user_id = 4 [json_name = "userId", (.validate.rules) = { ... }</code>
+       * <code>string user_id = 4 [json_name = "userId"];</code>
        * @param value The bytes for userId to set.
        * @return This builder for chaining.
        */
@@ -1224,7 +1224,7 @@ private static final long serialVersionUID = 0L;
        * IP address of the client that initiated the operation
        * </pre>
        *
-       * <code>string ip_address = 5 [json_name = "ipAddress", (.validate.rules) = { ... }</code>
+       * <code>string ip_address = 5 [json_name = "ipAddress"];</code>
        * @return The ipAddress.
        */
       public java.lang.String getIpAddress() {
@@ -1244,7 +1244,7 @@ private static final long serialVersionUID = 0L;
        * IP address of the client that initiated the operation
        * </pre>
        *
-       * <code>string ip_address = 5 [json_name = "ipAddress", (.validate.rules) = { ... }</code>
+       * <code>string ip_address = 5 [json_name = "ipAddress"];</code>
        * @return The bytes for ipAddress.
        */
       public com.google.protobuf.ByteString
@@ -1265,7 +1265,7 @@ private static final long serialVersionUID = 0L;
        * IP address of the client that initiated the operation
        * </pre>
        *
-       * <code>string ip_address = 5 [json_name = "ipAddress", (.validate.rules) = { ... }</code>
+       * <code>string ip_address = 5 [json_name = "ipAddress"];</code>
        * @param value The ipAddress to set.
        * @return This builder for chaining.
        */
@@ -1282,7 +1282,7 @@ private static final long serialVersionUID = 0L;
        * IP address of the client that initiated the operation
        * </pre>
        *
-       * <code>string ip_address = 5 [json_name = "ipAddress", (.validate.rules) = { ... }</code>
+       * <code>string ip_address = 5 [json_name = "ipAddress"];</code>
        * @return This builder for chaining.
        */
       public Builder clearIpAddress() {
@@ -1296,7 +1296,7 @@ private static final long serialVersionUID = 0L;
        * IP address of the client that initiated the operation
        * </pre>
        *
-       * <code>string ip_address = 5 [json_name = "ipAddress", (.validate.rules) = { ... }</code>
+       * <code>string ip_address = 5 [json_name = "ipAddress"];</code>
        * @param value The bytes for ipAddress to set.
        * @return This builder for chaining.
        */
@@ -1314,12 +1314,12 @@ private static final long serialVersionUID = 0L;
     }
 
     // @@protoc_insertion_point(class_scope:keycloak.event.v1.CreateAdminRequest.AuthDetails)
-    private static final ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails DEFAULT_INSTANCE;
+    private static final com.keycloak.event.v1.CreateAdminRequest.AuthDetails DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails();
+      DEFAULT_INSTANCE = new com.keycloak.event.v1.CreateAdminRequest.AuthDetails();
     }
 
-    public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails getDefaultInstance() {
+    public static com.keycloak.event.v1.CreateAdminRequest.AuthDetails getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1355,7 +1355,7 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails getDefaultInstanceForType() {
+    public com.keycloak.event.v1.CreateAdminRequest.AuthDetails getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1370,7 +1370,7 @@ private static final long serialVersionUID = 0L;
    * Unique identifier for the admin event
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
+   * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -1391,7 +1391,7 @@ private static final long serialVersionUID = 0L;
    * Unique identifier for the admin event
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
+   * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
   @java.lang.Override
@@ -1416,7 +1416,7 @@ private static final long serialVersionUID = 0L;
    * Timestamp when the admin event occurred
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
    * @return Whether the time field is set.
    */
   @java.lang.Override
@@ -1428,7 +1428,7 @@ private static final long serialVersionUID = 0L;
    * Timestamp when the admin event occurred
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
    * @return The time.
    */
   @java.lang.Override
@@ -1440,7 +1440,7 @@ private static final long serialVersionUID = 0L;
    * Timestamp when the admin event occurred
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+   * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getTimeOrBuilder() {
@@ -1455,7 +1455,7 @@ private static final long serialVersionUID = 0L;
    * Unique identifier of the realm where the event occurred
    * </pre>
    *
-   * <code>string realm_id = 3 [json_name = "realmId", (.validate.rules) = { ... }</code>
+   * <code>string realm_id = 3 [json_name = "realmId"];</code>
    * @return The realmId.
    */
   @java.lang.Override
@@ -1476,7 +1476,7 @@ private static final long serialVersionUID = 0L;
    * Unique identifier of the realm where the event occurred
    * </pre>
    *
-   * <code>string realm_id = 3 [json_name = "realmId", (.validate.rules) = { ... }</code>
+   * <code>string realm_id = 3 [json_name = "realmId"];</code>
    * @return The bytes for realmId.
    */
   @java.lang.Override
@@ -1542,7 +1542,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUTH_DETAILS_FIELD_NUMBER = 5;
-  private ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails authDetails_;
+  private com.keycloak.event.v1.CreateAdminRequest.AuthDetails authDetails_;
   /**
    * <pre>
    * Authentication details of the user or client who performed the operation
@@ -1564,8 +1564,8 @@ private static final long serialVersionUID = 0L;
    * @return The authDetails.
    */
   @java.lang.Override
-  public ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails getAuthDetails() {
-    return authDetails_ == null ? ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.getDefaultInstance() : authDetails_;
+  public com.keycloak.event.v1.CreateAdminRequest.AuthDetails getAuthDetails() {
+    return authDetails_ == null ? com.keycloak.event.v1.CreateAdminRequest.AuthDetails.getDefaultInstance() : authDetails_;
   }
   /**
    * <pre>
@@ -1575,8 +1575,8 @@ private static final long serialVersionUID = 0L;
    * <code>.keycloak.event.v1.CreateAdminRequest.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
    */
   @java.lang.Override
-  public ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetailsOrBuilder getAuthDetailsOrBuilder() {
-    return authDetails_ == null ? ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.getDefaultInstance() : authDetails_;
+  public com.keycloak.event.v1.CreateAdminRequest.AuthDetailsOrBuilder getAuthDetailsOrBuilder() {
+    return authDetails_ == null ? com.keycloak.event.v1.CreateAdminRequest.AuthDetails.getDefaultInstance() : authDetails_;
   }
 
   public static final int RESOURCE_TYPE_FIELD_NUMBER = 6;
@@ -1633,7 +1633,7 @@ private static final long serialVersionUID = 0L;
    * Type of operation performed (create, update, delete, action)
    * </pre>
    *
-   * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType", (.validate.rules) = { ... }</code>
+   * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
    * @return The enum numeric value on the wire for operationType.
    */
   @java.lang.Override public int getOperationTypeValue() {
@@ -1644,12 +1644,12 @@ private static final long serialVersionUID = 0L;
    * Type of operation performed (create, update, delete, action)
    * </pre>
    *
-   * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType", (.validate.rules) = { ... }</code>
+   * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
    * @return The operationType.
    */
-  @java.lang.Override public ru.event.listener.extension.keycloak.event.v1.OperationType getOperationType() {
-    ru.event.listener.extension.keycloak.event.v1.OperationType result = ru.event.listener.extension.keycloak.event.v1.OperationType.forNumber(operationType_);
-    return result == null ? ru.event.listener.extension.keycloak.event.v1.OperationType.UNRECOGNIZED : result;
+  @java.lang.Override public com.keycloak.event.v1.OperationType getOperationType() {
+    com.keycloak.event.v1.OperationType result = com.keycloak.event.v1.OperationType.forNumber(operationType_);
+    return result == null ? com.keycloak.event.v1.OperationType.UNRECOGNIZED : result;
   }
 
   public static final int RESOURCE_PATH_FIELD_NUMBER = 8;
@@ -1799,7 +1799,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String, java.lang.String> defaultEntry =
             com.google.protobuf.MapEntry
             .<java.lang.String, java.lang.String>newDefaultInstance(
-                ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_DetailsEntry_descriptor, 
+                com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_DetailsEntry_descriptor, 
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "",
                 com.google.protobuf.WireFormat.FieldType.STRING,
@@ -1824,7 +1824,7 @@ private static final long serialVersionUID = 0L;
    * Additional details about the event in key-value pairs
    * </pre>
    *
-   * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+   * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
    */
   @java.lang.Override
   public boolean containsDetails(
@@ -1845,7 +1845,7 @@ private static final long serialVersionUID = 0L;
    * Additional details about the event in key-value pairs
    * </pre>
    *
-   * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+   * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
    */
   @java.lang.Override
   public java.util.Map<java.lang.String, java.lang.String> getDetailsMap() {
@@ -1856,7 +1856,7 @@ private static final long serialVersionUID = 0L;
    * Additional details about the event in key-value pairs
    * </pre>
    *
-   * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+   * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
    */
   @java.lang.Override
   public /* nullable */
@@ -1874,7 +1874,7 @@ java.lang.String defaultValue) {
    * Additional details about the event in key-value pairs
    * </pre>
    *
-   * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+   * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
    */
   @java.lang.Override
   public java.lang.String getDetailsOrThrow(
@@ -1920,7 +1920,7 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(resourceType_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 6, resourceType_);
     }
-    if (operationType_ != ru.event.listener.extension.keycloak.event.v1.OperationType.OPERATION_TYPE_INVALID.getNumber()) {
+    if (operationType_ != com.keycloak.event.v1.OperationType.OPERATION_TYPE_INVALID.getNumber()) {
       output.writeEnum(7, operationType_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(resourcePath_)) {
@@ -1967,7 +1967,7 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(resourceType_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(6, resourceType_);
     }
-    if (operationType_ != ru.event.listener.extension.keycloak.event.v1.OperationType.OPERATION_TYPE_INVALID.getNumber()) {
+    if (operationType_ != com.keycloak.event.v1.OperationType.OPERATION_TYPE_INVALID.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, operationType_);
     }
@@ -2000,10 +2000,10 @@ java.lang.String defaultValue) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest)) {
+    if (!(obj instanceof com.keycloak.event.v1.CreateAdminRequest)) {
       return super.equals(obj);
     }
-    ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest other = (ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest) obj;
+    com.keycloak.event.v1.CreateAdminRequest other = (com.keycloak.event.v1.CreateAdminRequest) obj;
 
     if (!getId()
         .equals(other.getId())) return false;
@@ -2076,44 +2076,44 @@ java.lang.String defaultValue) {
     return hash;
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest parseFrom(
+  public static com.keycloak.event.v1.CreateAdminRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest parseFrom(
+  public static com.keycloak.event.v1.CreateAdminRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest parseFrom(
+  public static com.keycloak.event.v1.CreateAdminRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest parseFrom(
+  public static com.keycloak.event.v1.CreateAdminRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest parseFrom(byte[] data)
+  public static com.keycloak.event.v1.CreateAdminRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest parseFrom(
+  public static com.keycloak.event.v1.CreateAdminRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest parseFrom(java.io.InputStream input)
+  public static com.keycloak.event.v1.CreateAdminRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest parseFrom(
+  public static com.keycloak.event.v1.CreateAdminRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -2121,26 +2121,26 @@ java.lang.String defaultValue) {
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.keycloak.event.v1.CreateAdminRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest parseDelimitedFrom(
+  public static com.keycloak.event.v1.CreateAdminRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest parseFrom(
+  public static com.keycloak.event.v1.CreateAdminRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest parseFrom(
+  public static com.keycloak.event.v1.CreateAdminRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -2153,7 +2153,7 @@ java.lang.String defaultValue) {
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest prototype) {
+  public static Builder newBuilder(com.keycloak.event.v1.CreateAdminRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -2180,10 +2180,10 @@ java.lang.String defaultValue) {
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:keycloak.event.v1.CreateAdminRequest)
-      ru.event.listener.extension.keycloak.event.v1.CreateAdminRequestOrBuilder {
+      com.keycloak.event.v1.CreateAdminRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_descriptor;
+      return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -2211,12 +2211,12 @@ java.lang.String defaultValue) {
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_fieldAccessorTable
+      return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.class, ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.Builder.class);
+              com.keycloak.event.v1.CreateAdminRequest.class, com.keycloak.event.v1.CreateAdminRequest.Builder.class);
     }
 
-    // Construct using ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.newBuilder()
+    // Construct using com.keycloak.event.v1.CreateAdminRequest.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -2262,17 +2262,17 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ru.event.listener.extension.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_descriptor;
+      return com.keycloak.event.v1.EventApiProto.internal_static_keycloak_event_v1_CreateAdminRequest_descriptor;
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest getDefaultInstanceForType() {
-      return ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.getDefaultInstance();
+    public com.keycloak.event.v1.CreateAdminRequest getDefaultInstanceForType() {
+      return com.keycloak.event.v1.CreateAdminRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest build() {
-      ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest result = buildPartial();
+    public com.keycloak.event.v1.CreateAdminRequest build() {
+      com.keycloak.event.v1.CreateAdminRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -2280,14 +2280,14 @@ java.lang.String defaultValue) {
     }
 
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest buildPartial() {
-      ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest result = new ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest(this);
+    public com.keycloak.event.v1.CreateAdminRequest buildPartial() {
+      com.keycloak.event.v1.CreateAdminRequest result = new com.keycloak.event.v1.CreateAdminRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest result) {
+    private void buildPartial0(com.keycloak.event.v1.CreateAdminRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.id_ = id_;
@@ -2335,16 +2335,16 @@ java.lang.String defaultValue) {
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest) {
-        return mergeFrom((ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest)other);
+      if (other instanceof com.keycloak.event.v1.CreateAdminRequest) {
+        return mergeFrom((com.keycloak.event.v1.CreateAdminRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest other) {
-      if (other == ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.keycloak.event.v1.CreateAdminRequest other) {
+      if (other == com.keycloak.event.v1.CreateAdminRequest.getDefaultInstance()) return this;
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
         bitField0_ |= 0x00000001;
@@ -2504,7 +2504,7 @@ java.lang.String defaultValue) {
      * Unique identifier for the admin event
      * </pre>
      *
-     * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     public java.lang.String getId() {
@@ -2524,7 +2524,7 @@ java.lang.String defaultValue) {
      * Unique identifier for the admin event
      * </pre>
      *
-     * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
@@ -2545,7 +2545,7 @@ java.lang.String defaultValue) {
      * Unique identifier for the admin event
      * </pre>
      *
-     * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -2562,7 +2562,7 @@ java.lang.String defaultValue) {
      * Unique identifier for the admin event
      * </pre>
      *
-     * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -2576,7 +2576,7 @@ java.lang.String defaultValue) {
      * Unique identifier for the admin event
      * </pre>
      *
-     * <code>string id = 1 [json_name = "id", (.validate.rules) = { ... }</code>
+     * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
      */
@@ -2598,7 +2598,7 @@ java.lang.String defaultValue) {
      * Timestamp when the admin event occurred
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
      * @return Whether the time field is set.
      */
     public boolean hasTime() {
@@ -2609,7 +2609,7 @@ java.lang.String defaultValue) {
      * Timestamp when the admin event occurred
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
      * @return The time.
      */
     public com.google.protobuf.Timestamp getTime() {
@@ -2624,7 +2624,7 @@ java.lang.String defaultValue) {
      * Timestamp when the admin event occurred
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
      */
     public Builder setTime(com.google.protobuf.Timestamp value) {
       if (timeBuilder_ == null) {
@@ -2644,7 +2644,7 @@ java.lang.String defaultValue) {
      * Timestamp when the admin event occurred
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
      */
     public Builder setTime(
         com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -2662,7 +2662,7 @@ java.lang.String defaultValue) {
      * Timestamp when the admin event occurred
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
      */
     public Builder mergeTime(com.google.protobuf.Timestamp value) {
       if (timeBuilder_ == null) {
@@ -2687,7 +2687,7 @@ java.lang.String defaultValue) {
      * Timestamp when the admin event occurred
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
      */
     public Builder clearTime() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -2704,7 +2704,7 @@ java.lang.String defaultValue) {
      * Timestamp when the admin event occurred
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getTimeBuilder() {
       bitField0_ |= 0x00000002;
@@ -2716,7 +2716,7 @@ java.lang.String defaultValue) {
      * Timestamp when the admin event occurred
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getTimeOrBuilder() {
       if (timeBuilder_ != null) {
@@ -2731,7 +2731,7 @@ java.lang.String defaultValue) {
      * Timestamp when the admin event occurred
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time", (.validate.rules) = { ... }</code>
+     * <code>.google.protobuf.Timestamp time = 2 [json_name = "time"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -2753,7 +2753,7 @@ java.lang.String defaultValue) {
      * Unique identifier of the realm where the event occurred
      * </pre>
      *
-     * <code>string realm_id = 3 [json_name = "realmId", (.validate.rules) = { ... }</code>
+     * <code>string realm_id = 3 [json_name = "realmId"];</code>
      * @return The realmId.
      */
     public java.lang.String getRealmId() {
@@ -2773,7 +2773,7 @@ java.lang.String defaultValue) {
      * Unique identifier of the realm where the event occurred
      * </pre>
      *
-     * <code>string realm_id = 3 [json_name = "realmId", (.validate.rules) = { ... }</code>
+     * <code>string realm_id = 3 [json_name = "realmId"];</code>
      * @return The bytes for realmId.
      */
     public com.google.protobuf.ByteString
@@ -2794,7 +2794,7 @@ java.lang.String defaultValue) {
      * Unique identifier of the realm where the event occurred
      * </pre>
      *
-     * <code>string realm_id = 3 [json_name = "realmId", (.validate.rules) = { ... }</code>
+     * <code>string realm_id = 3 [json_name = "realmId"];</code>
      * @param value The realmId to set.
      * @return This builder for chaining.
      */
@@ -2811,7 +2811,7 @@ java.lang.String defaultValue) {
      * Unique identifier of the realm where the event occurred
      * </pre>
      *
-     * <code>string realm_id = 3 [json_name = "realmId", (.validate.rules) = { ... }</code>
+     * <code>string realm_id = 3 [json_name = "realmId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRealmId() {
@@ -2825,7 +2825,7 @@ java.lang.String defaultValue) {
      * Unique identifier of the realm where the event occurred
      * </pre>
      *
-     * <code>string realm_id = 3 [json_name = "realmId", (.validate.rules) = { ... }</code>
+     * <code>string realm_id = 3 [json_name = "realmId"];</code>
      * @param value The bytes for realmId to set.
      * @return This builder for chaining.
      */
@@ -2931,9 +2931,9 @@ java.lang.String defaultValue) {
       return this;
     }
 
-    private ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails authDetails_;
+    private com.keycloak.event.v1.CreateAdminRequest.AuthDetails authDetails_;
     private com.google.protobuf.SingleFieldBuilder<
-        ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails, ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.Builder, ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetailsOrBuilder> authDetailsBuilder_;
+        com.keycloak.event.v1.CreateAdminRequest.AuthDetails, com.keycloak.event.v1.CreateAdminRequest.AuthDetails.Builder, com.keycloak.event.v1.CreateAdminRequest.AuthDetailsOrBuilder> authDetailsBuilder_;
     /**
      * <pre>
      * Authentication details of the user or client who performed the operation
@@ -2953,9 +2953,9 @@ java.lang.String defaultValue) {
      * <code>.keycloak.event.v1.CreateAdminRequest.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
      * @return The authDetails.
      */
-    public ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails getAuthDetails() {
+    public com.keycloak.event.v1.CreateAdminRequest.AuthDetails getAuthDetails() {
       if (authDetailsBuilder_ == null) {
-        return authDetails_ == null ? ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.getDefaultInstance() : authDetails_;
+        return authDetails_ == null ? com.keycloak.event.v1.CreateAdminRequest.AuthDetails.getDefaultInstance() : authDetails_;
       } else {
         return authDetailsBuilder_.getMessage();
       }
@@ -2967,7 +2967,7 @@ java.lang.String defaultValue) {
      *
      * <code>.keycloak.event.v1.CreateAdminRequest.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
      */
-    public Builder setAuthDetails(ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails value) {
+    public Builder setAuthDetails(com.keycloak.event.v1.CreateAdminRequest.AuthDetails value) {
       if (authDetailsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -2988,7 +2988,7 @@ java.lang.String defaultValue) {
      * <code>.keycloak.event.v1.CreateAdminRequest.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
      */
     public Builder setAuthDetails(
-        ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.Builder builderForValue) {
+        com.keycloak.event.v1.CreateAdminRequest.AuthDetails.Builder builderForValue) {
       if (authDetailsBuilder_ == null) {
         authDetails_ = builderForValue.build();
       } else {
@@ -3005,11 +3005,11 @@ java.lang.String defaultValue) {
      *
      * <code>.keycloak.event.v1.CreateAdminRequest.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
      */
-    public Builder mergeAuthDetails(ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails value) {
+    public Builder mergeAuthDetails(com.keycloak.event.v1.CreateAdminRequest.AuthDetails value) {
       if (authDetailsBuilder_ == null) {
         if (((bitField0_ & 0x00000010) != 0) &&
           authDetails_ != null &&
-          authDetails_ != ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.getDefaultInstance()) {
+          authDetails_ != com.keycloak.event.v1.CreateAdminRequest.AuthDetails.getDefaultInstance()) {
           getAuthDetailsBuilder().mergeFrom(value);
         } else {
           authDetails_ = value;
@@ -3047,7 +3047,7 @@ java.lang.String defaultValue) {
      *
      * <code>.keycloak.event.v1.CreateAdminRequest.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
      */
-    public ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.Builder getAuthDetailsBuilder() {
+    public com.keycloak.event.v1.CreateAdminRequest.AuthDetails.Builder getAuthDetailsBuilder() {
       bitField0_ |= 0x00000010;
       onChanged();
       return internalGetAuthDetailsFieldBuilder().getBuilder();
@@ -3059,12 +3059,12 @@ java.lang.String defaultValue) {
      *
      * <code>.keycloak.event.v1.CreateAdminRequest.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
      */
-    public ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetailsOrBuilder getAuthDetailsOrBuilder() {
+    public com.keycloak.event.v1.CreateAdminRequest.AuthDetailsOrBuilder getAuthDetailsOrBuilder() {
       if (authDetailsBuilder_ != null) {
         return authDetailsBuilder_.getMessageOrBuilder();
       } else {
         return authDetails_ == null ?
-            ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.getDefaultInstance() : authDetails_;
+            com.keycloak.event.v1.CreateAdminRequest.AuthDetails.getDefaultInstance() : authDetails_;
       }
     }
     /**
@@ -3075,11 +3075,11 @@ java.lang.String defaultValue) {
      * <code>.keycloak.event.v1.CreateAdminRequest.AuthDetails auth_details = 5 [json_name = "authDetails"];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
-        ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails, ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.Builder, ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetailsOrBuilder> 
+        com.keycloak.event.v1.CreateAdminRequest.AuthDetails, com.keycloak.event.v1.CreateAdminRequest.AuthDetails.Builder, com.keycloak.event.v1.CreateAdminRequest.AuthDetailsOrBuilder> 
         internalGetAuthDetailsFieldBuilder() {
       if (authDetailsBuilder_ == null) {
         authDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails, ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetails.Builder, ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest.AuthDetailsOrBuilder>(
+            com.keycloak.event.v1.CreateAdminRequest.AuthDetails, com.keycloak.event.v1.CreateAdminRequest.AuthDetails.Builder, com.keycloak.event.v1.CreateAdminRequest.AuthDetailsOrBuilder>(
                 getAuthDetails(),
                 getParentForChildren(),
                 isClean());
@@ -3186,7 +3186,7 @@ java.lang.String defaultValue) {
      * Type of operation performed (create, update, delete, action)
      * </pre>
      *
-     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType", (.validate.rules) = { ... }</code>
+     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
      * @return The enum numeric value on the wire for operationType.
      */
     @java.lang.Override public int getOperationTypeValue() {
@@ -3197,7 +3197,7 @@ java.lang.String defaultValue) {
      * Type of operation performed (create, update, delete, action)
      * </pre>
      *
-     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType", (.validate.rules) = { ... }</code>
+     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
      * @param value The enum numeric value on the wire for operationType to set.
      * @return This builder for chaining.
      */
@@ -3212,24 +3212,24 @@ java.lang.String defaultValue) {
      * Type of operation performed (create, update, delete, action)
      * </pre>
      *
-     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType", (.validate.rules) = { ... }</code>
+     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
      * @return The operationType.
      */
     @java.lang.Override
-    public ru.event.listener.extension.keycloak.event.v1.OperationType getOperationType() {
-      ru.event.listener.extension.keycloak.event.v1.OperationType result = ru.event.listener.extension.keycloak.event.v1.OperationType.forNumber(operationType_);
-      return result == null ? ru.event.listener.extension.keycloak.event.v1.OperationType.UNRECOGNIZED : result;
+    public com.keycloak.event.v1.OperationType getOperationType() {
+      com.keycloak.event.v1.OperationType result = com.keycloak.event.v1.OperationType.forNumber(operationType_);
+      return result == null ? com.keycloak.event.v1.OperationType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * Type of operation performed (create, update, delete, action)
      * </pre>
      *
-     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType", (.validate.rules) = { ... }</code>
+     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
      * @param value The operationType to set.
      * @return This builder for chaining.
      */
-    public Builder setOperationType(ru.event.listener.extension.keycloak.event.v1.OperationType value) {
+    public Builder setOperationType(com.keycloak.event.v1.OperationType value) {
       if (value == null) { throw new NullPointerException(); }
       bitField0_ |= 0x00000040;
       operationType_ = value.getNumber();
@@ -3241,7 +3241,7 @@ java.lang.String defaultValue) {
      * Type of operation performed (create, update, delete, action)
      * </pre>
      *
-     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType", (.validate.rules) = { ... }</code>
+     * <code>.keycloak.event.v1.OperationType operation_type = 7 [json_name = "operationType"];</code>
      * @return This builder for chaining.
      */
     public Builder clearOperationType() {
@@ -3558,7 +3558,7 @@ java.lang.String defaultValue) {
      * Additional details about the event in key-value pairs
      * </pre>
      *
-     * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+     * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
      */
     @java.lang.Override
     public boolean containsDetails(
@@ -3579,7 +3579,7 @@ java.lang.String defaultValue) {
      * Additional details about the event in key-value pairs
      * </pre>
      *
-     * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+     * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
      */
     @java.lang.Override
     public java.util.Map<java.lang.String, java.lang.String> getDetailsMap() {
@@ -3590,7 +3590,7 @@ java.lang.String defaultValue) {
      * Additional details about the event in key-value pairs
      * </pre>
      *
-     * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+     * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
      */
     @java.lang.Override
     public /* nullable */
@@ -3608,7 +3608,7 @@ java.lang.String defaultValue) {
      * Additional details about the event in key-value pairs
      * </pre>
      *
-     * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+     * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
      */
     @java.lang.Override
     public java.lang.String getDetailsOrThrow(
@@ -3632,7 +3632,7 @@ java.lang.String defaultValue) {
      * Additional details about the event in key-value pairs
      * </pre>
      *
-     * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+     * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
      */
     public Builder removeDetails(
         java.lang.String key) {
@@ -3655,7 +3655,7 @@ java.lang.String defaultValue) {
      * Additional details about the event in key-value pairs
      * </pre>
      *
-     * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+     * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
      */
     public Builder putDetails(
         java.lang.String key,
@@ -3672,7 +3672,7 @@ java.lang.String defaultValue) {
      * Additional details about the event in key-value pairs
      * </pre>
      *
-     * <code>map&lt;string, string&gt; details = 11 [json_name = "details", (.validate.rules) = { ... }</code>
+     * <code>map&lt;string, string&gt; details = 11 [json_name = "details"];</code>
      */
     public Builder putAllDetails(
         java.util.Map<java.lang.String, java.lang.String> values) {
@@ -3686,12 +3686,12 @@ java.lang.String defaultValue) {
   }
 
   // @@protoc_insertion_point(class_scope:keycloak.event.v1.CreateAdminRequest)
-  private static final ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest DEFAULT_INSTANCE;
+  private static final com.keycloak.event.v1.CreateAdminRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest();
+    DEFAULT_INSTANCE = new com.keycloak.event.v1.CreateAdminRequest();
   }
 
-  public static ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest getDefaultInstance() {
+  public static com.keycloak.event.v1.CreateAdminRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -3727,7 +3727,7 @@ java.lang.String defaultValue) {
   }
 
   @java.lang.Override
-  public ru.event.listener.extension.keycloak.event.v1.CreateAdminRequest getDefaultInstanceForType() {
+  public com.keycloak.event.v1.CreateAdminRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
